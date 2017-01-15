@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   		<class name="com.yeoou.tour.model.TripFlag" table="t_yemian" lazy="false">
+	   			<id name="id" column="Id">
+	   				<generator class="uuid.hex"></generator>
+	   			</id>
+	   			<property name="title" column="Title"></property>
+	   			<property name="name" column="Name"></property>
+	   		</class>
+	   </hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   	<class name="com.yeoou.tour.model.TicketLog" table="t_ticketlog" lazy="false">
+	   		<id name="logId" column="Id">
+	   			<generator class="uuid.hex"></generator>
+	   		</id>
+	   		<property name="name" column="Name"></property>
+	   		<property name="ticketId" column="TicketId"></property>
+	   		<property name="date" column="Date"></property>
+	   		<property name="seats" column="Seats"></property>
+	   		<property name="book" column="Book" ></property>
+	   		<property name="confirm" column="Confirm" ></property>
+	   		<property name="ticketNo" column="TicketNo" ></property>
+	   		<property name="status" column="Status" ></property>
+	   		<property name="busType" column="BusType" ></property>
+	   		<property name="sellNum" column="SellNum" ></property>
+	   		<property name="total" column="Total" ></property>
+	   		<property name="logNo" column="LogNo" ></property>
+	   	</class>
+	   </hibernate-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">	
+	<bean id="baseActionSupport" scope="prototype" class="com.yeoou.common.web.BaseActionSupport"></bean>
+	<bean id="areaAction" scope="prototype" class="com.yeoou.tour.web.AreaAction"></bean>
+	<bean id="regionAction" scope="prototype" class="com.yeoou.tour.web.RegionAction"></bean>
+	<bean id="sceneryAction" scope="prototype" class="com.yeoou.tour.web.SceneryAction"></bean>
+	<bean id="keyWordAction" scope="prototype" class="com.yeoou.tour.web.KeyWordAction"></bean>
+	<bean id="sceneryTypeAction" scope="prototype" class="com.yeoou.tour.web.SceneryTypeAction"></bean>
+	<bean id="sceneryPicAction" scope="prototype" class="com.yeoou.tour.web.SceneryPicAction"></bean>
+	<bean id="lineAction" scope="prototype" class="com.yeoou.tour.web.LineAction"></bean>
+	<bean id="assembleAction" scope="prototype" class="com.yeoou.tour.web.AssembleAction"></bean>
+	<bean id="airAction" scope="prototype" class="com.yeoou.tour.web.AirAction"></bean>
+	<bean id="busAction" scope="prototype" class="com.yeoou.tour.web.BusAction"></bean>
+	<bean id="shipAction" scope="prototype" class="com.yeoou.tour.web.ShipAction"></bean>
+	<bean id="trainAction" scope="prototype" class="com.yeoou.tour.web.TrainAction"></bean>
+	<bean id="teamAction" scope="prototype" class="com.yeoou.tour.web.TeamAction"></bean>
+	<bean id="clientAreaAction" scope="prototype" class="com.yeoou.tour.web.ClientAreaAction"></bean>
+	<bean id="clientSceneryAction" scope="prototype" class="com.yeoou.tour.web.ClientSceneryAction"></bean>
+	<bean id="clientTeamAction" scope="prototype" class="com.yeoou.tour.web.ClientTeamAction"></bean>
+	<bean id="newsTypeAction" scope="prototype" class="com.yeoou.tour.web.NewsTypeAction"></bean>
+	<bean id="newsAction" scope="prototype" class="com.yeoou.tour.web.NewsAction"></bean>
+	<bean id="visaAction" scope="prototype" class="com.yeoou.tour.web.VisaAction"></bean>
+	<bean id="tripConfigAction" scope="prototype" class="com.yeoou.tour.web.TripConfigAction"></bean>
+	<bean id="webSiteAction" scope="prototype" class="com.yeoou.tour.web.WebSiteAction"></bean>
+	<bean id="clientPageAction" scope="prototype" class="com.yeoou.tour.web.ClientPageAction"></bean>
+	<bean id="acegiAction" scope="prototype" class="com.yeoou.tour.web.AcegiAction"></bean>
+	<bean id="managerAction" scope="prototype" class="com.yeoou.tour.web.ManagerAction"></bean>
+	<bean id="iprouterAction" scope="prototype" class="com.yeoou.tour.web.IPRouterAction"></bean>
+	<bean id="clientVisaAction" scope="prototype" class="com.yeoou.tour.web.ClientVisaAction"></bean>
+	<bean id="clientNewsAction" scope="prototype" class="com.yeoou.tour.web.ClientNewsAction"></bean>
+	<bean id="clientPictureAction" scope="prototype" class="com.yeoou.tour.web.ClientPictureAction"></bean>
+	<bean id="clientDoorOrderAction" scope="prototype" class="com.yeoou.tour.web.ClientDoorOrderAction"></bean>
+	<bean id="doorOrderAction" scope="prototype" class="com.yeoou.tour.web.DoorOrderAction"></bean>
+	<bean id="clientSearchAction" scope="prototype" class="com.yeoou.tour.web.ClientSearchAction"></bean>
+	<bean id="messageAction" scope="prototype" class="com.yeoou.tour.web.MessageAction"></bean>
+</beans>

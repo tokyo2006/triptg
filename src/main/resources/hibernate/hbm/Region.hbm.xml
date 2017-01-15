@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.Region" table="t_region" lazy="false">
+			<id name="regionId" column="RegionID">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="Name"></property>
+			<property name="orderBy" column="OrderBy"></property>
+	        <property name="depth" column="Depth"></property>
+	        <property name="headName" column="HeadName"></property>
+	        <property name="fullName" column="FullName"></property>
+	        <property name="parent" column="ParentId"></property>
+		    <many-to-one name="area" column="AreaId" class="com.yeoou.tour.model.Area" ></many-to-one>
+	        <set name="children" cascade="save-update" inverse="true" lazy="true" >
+	           <key column="ParentId" />
+	           <one-to-many class="com.yeoou.tour.model.Region" />
+	        </set>
+	        <property name="flag" column="Flag"></property>
+		</class>
+	</hibernate-mapping>

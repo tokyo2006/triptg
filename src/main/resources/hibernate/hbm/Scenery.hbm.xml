@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.Scenery" table="t_scenery" lazy="false">
+			<id name="sceneryId" column="SceneryId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="allHits" column="AllHits"></property>
+			<property name="weekHits" column="WeekHit"></property>
+			<property name="monthHits" column="MonthHits"></property>
+			<property name="htmlFileData" column="HtmFileData"></property>
+			<property name="isUpdate" column="IsUpdate"></property>
+			<property name="isTop" column="IsTop"></property>
+			<property name="ticketPrice" column="TicketPrice"></property>
+			<property name="content" column="Content"></property>
+			<property name="synopsis" column="Synopsis"></property>
+			<property name="level" column="Level"></property>
+			<property name="subTopic" column="SubTopic"></property>
+			<property name="firstLetter" column="FirstLetter"></property>
+			<property name="name" column="Name"></property>
+			<set name="types" table="t_scenery_type" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="SceneryId"></key>
+				<many-to-many class="com.yeoou.tour.model.SceneryType" column="SceneryTypeId"></many-to-many>
+			</set>
+			<set name="areas" table="t_scenery_area" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="SceneryId"></key>
+				<many-to-many class="com.yeoou.tour.model.Area" column="AreaId"></many-to-many>
+			</set>
+			<set name="regions" table="t_scenery_region" inverse="false" lazy="true" cascade="save-update" batch-size="3">
+				<key column="SceneryId"></key>
+				<many-to-many class="com.yeoou.tour.model.Region" column="RegionId"></many-to-many>
+			</set>
+		</class>
+	</hibernate-mapping>

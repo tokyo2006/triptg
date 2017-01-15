@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.Message" table="t_message" lazy="false">
+			<id name="msgId" column="MsgId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="title" column="Title"></property>
+			<property name="reciverContain" column="ReciverContain"></property>
+			<property name="sendContain" column="SendContain"></property>
+			<property name="reciver" column="Reciver"></property>
+			<property name="sender" column="Sender"></property>
+			<property name="senderId" column="SenderId"></property>
+			<property name="reciverId" column="ReciverId"></property>
+			<property name="rdatetime" column="Rdatetime" type = "timestamp"></property>
+			<property name="sdatetime" column="Sdatetime" type = "timestamp"></property>
+			<property name="rdatetimeStr" column="RdatetimeStr"></property>
+			<property name="sdatetimeStr" column="SdatetimeStr"></property>
+			<property name="email" column="Email"></property>
+			<property name="groupId" column="GroupId"></property>
+			
+		</class>
+	</hibernate-mapping>

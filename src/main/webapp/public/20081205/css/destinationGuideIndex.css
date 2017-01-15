@@ -1,0 +1,25 @@
+
+
+.destinationGuideMap { background:#B8D7FF}
+.destinationGuideMap .map { float:left; width:401px; padding:3px}
+.destinationGuideMap .map ul li { float:left; cursor:pointer; height:20px; margin-right:3px; padding:2px 22px 0; color:#05A; border:1px solid #89B0E2; border-bottom:0; background:#E6F3FF}
+.destinationGuideMap .map ul li h2 { font-size:14px; font-weight:bold; color:#05A}
+.destinationGuideMap .map ul li:hover { text-decoration:underline}
+.destinationGuideMap .map ul li.s1 { background:#E6F3FF}
+.destinationGuideMap .map ul li.selected { position:relative; z-index:10; cursor:default; height:20px; padding-bottom:1px; margin-bottom:-1px; background:#FFF}
+.destinationGuideMap .map ul li.selected:hover { text-decoration:none}
+.destinationGuideMap .map ul li.selected h2 { color:#1C1C1C}
+
+.destinationGuideMap .map .map_pic { border:1px solid #89B0E2; background:#FFF}
+.destinationGuideMap .search { float:left; width:210px; height:312px; margin-top:26px; padding:0 8px; border:1px solid #89B0E2; background:#F3F9FF}
+.destinationGuideMap .search dl { padding:15px 0 20px}
+.destinationGuideMap .search dt { padding-bottom:5px; font-weight:bold; color:#666}
+.destinationGuideMap .search dd input { width:135px; margin-right:4px; padding:2px 3px 0; height:16px; line-height:16px; border:1px solid #BBB; background:url(../image/form_bg.gif) no-repeat #FFF}
+.destinationGuideMap .search dd li { padding:2px 0}
+.destinationGuideMap .search dd em { color:#E85D00}
+.destinationGuideMap .search dd span a { padding-left:8px}
+
+
+
+.parent01 { width:638px; float:left}
+

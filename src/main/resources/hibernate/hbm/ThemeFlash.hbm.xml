@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.ThemeFlash" table="t_themeflash" lazy="false">
+			<id name="id" column="Id">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="url" column="Url"></property>
+			<property name="name" column="Name"></property>
+			<property name="picUrl" column="PicUrl"></property>
+			<property name="breUrl" column="BrePicUrl"></property>
+			<property name="title" column="Title"></property>
+			<property name="subTitle" column="SubTitle"></property>
+			<property name="target" column="Target"></property>
+			<property name="od" column="Od"></property>
+			<many-to-one name="flashType" column="TypeId" class="com.yeoou.tour.model.FlashType"></many-to-one>
+		</class>
+	</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.NewsCount" table="t_count_news" lazy="false">
+			<id name="countId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="newsId"></property>
+			<property name="hit"></property>
+			<property name="monthHit"></property>
+			<property name="month"></property>
+			<property name="weekHit"></property>
+			<property name="week"></property>
+		</class>
+	</hibernate-mapping>

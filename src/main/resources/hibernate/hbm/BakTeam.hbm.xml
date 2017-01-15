@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.BakTeam" table="t_backteam" lazy="false">
+			<id name="bakTeamId" column="TeamId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="teamId" column="TeamRealId"></property>
+			<property name="teamNo" column="TeamNo"></property>
+			<property name="shadowNum" column="ShadowNum"></property>
+			<property name="flag" column="Flag"></property>
+			<property name="teamName" column="TeamName"></property>
+			<property name="ticketType" column="TicketType"></property>
+			<property name="ticketId" column="TicketId"></property>
+			<property name="day" column="Day"></property>
+			<property name="manPrice" column="ManPrice"></property>
+			<property name="childPrice" column="ChildPrice"></property>
+			<many-to-one name="user" column="UserId" class="com.yeoou.rbac.model.User" lazy="false"></many-to-one>
+			<many-to-one name="ticketLog" column="ticketLogId" class="com.yeoou.tour.model.TicketLog" lazy="false"></many-to-one>
+			<property name="realDate" column="StartDate"></property>
+			<property name="urgentTel" column="UrgentTel"></property>
+			<property name="hotelPrice" column="HotelPrice"></property>
+			<property name="hotelStar" column="HotelStar"></property>
+			<property name="planeGo" column="PlaneGo"></property>
+			<property name="planeBack" column="PlaneBack"></property>
+			<property name="planeTax" column="PlaneTax"></property>
+			<property name="hotelContent" column="HotelContent"></property>
+			<property name="feeClude" column="FeeClude"></property>
+			<property name="feeUnclude" column="FeeUnclude"></property>
+			<property name="remark" column="Remark"></property>
+			<property name="feature" column="Feature"></property>
+			<property name="safe" column="Safe"></property>
+			<property name="selfBuy" column="Selfbuy"></property>
+			<property name="purchase" column="Purchase"></property>
+			<property name="content" column="Content"></property>
+			<property name="theme" column="Theme"></property>
+			<property name="total" column="Total"></property>
+			<property name="confirm" column="Confirm"></property>
+			<property name="book" column="Book"></property>
+			<property name="picUrl" column="PicUrl"></property>
+		</class>
+	</hibernate-mapping>

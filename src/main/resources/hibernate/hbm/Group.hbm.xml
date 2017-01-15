@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.rbac.model.Group" table="t_group" lazy="false">
+			<id name="groupId" column="GroupId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="GroupName"></property>
+			<set name="roles" table="t_group_role" inverse="false" lazy="true" cascade="save-update" batch-size="3">
+				<key column="GroupId"></key>
+				<many-to-many class="com.yeoou.rbac.model.Role" column="RoleId"></many-to-many>
+			</set>
+		</class>
+	</hibernate-mapping>

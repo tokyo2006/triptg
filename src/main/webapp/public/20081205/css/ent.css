@@ -1,0 +1,40 @@
+
+.flash-box { 
+	margin-left:8px; FLOAT: left; OVERFLOW: hidden; WIDTH: 300px; POSITION: relative; HEIGHT: 341px
+}
+.flash-box .text {
+	LEFT: 0px; WIDTH: 300px; POSITION: absolute; TOP: 251px; HEIGHT: 90px
+}
+.flash-box .text H3 {
+	Z-INDEX: 10; LEFT: 10px; WIDTH: 280px; POSITION: absolute; TOP: 5px; HEIGHT: 30px
+}
+.flash-box .text P {
+	Z-INDEX: 10; LEFT: 10px; WIDTH: 280px; POSITION: absolute; TOP: 5px; HEIGHT: 30px
+}
+.flash-box .text H3 A {
+	FONT: 20px/36px simhei, Verdana,Lucida, Arial, Helvetica, sans-serif; COLOR: #ffffff
+}
+.flash-box .text H3 A:hover {
+	COLOR: #ff9a16; TEXT-DECORATION: none
+}
+.flash-box .text P {
+	COLOR: #ffffff; LINE-HEIGHT: 22px; TOP: 35px; HEIGHT: 22px
+}
+.flash-box .text P A {
+	COLOR: #ffffff
+}
+.flash-box .text .pager {
+	Z-INDEX: 10; RIGHT: 0px; OVERFLOW: hidden; WIDTH: 110px; BOTTOM: 0px; POSITION: absolute; HEIGHT: 21px; _right: -4px; _bottom: -1px; _width: 114px
+}
+.flash-box .text .pager A {
+	DISPLAY: block; FONT-WEIGHT: bold; FLOAT: left; MARGIN-LEFT: 1px; WIDTH: 21px; COLOR: #ffffff; LINE-HEIGHT: 21px; FONT-FAMILY: Tahoma; HEIGHT: 21px; TEXT-ALIGN: center
+}
+.flash-box .text .pager A:hover {
+	COLOR: #ff9a16; TEXT-DECORATION: none
+}
+.flash-box .text .pager A.currA {
+	COLOR: #ff9a16; TEXT-DECORATION: none
+}
+.flash-box .text .bg {
+	Z-INDEX: 1; BACKGROUND: url(../image/flash-bg.png) no-repeat 0px 0px; LEFT: 0px; WIDTH: 320px; POSITION: absolute; TOP: 0px; HEIGHT: 90px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../image/flash-bg.png',sizingMethod='crop')
+}

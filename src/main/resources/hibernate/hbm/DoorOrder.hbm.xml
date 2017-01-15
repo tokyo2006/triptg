@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.yeoou.tour.model.DoorOrder" table="t_doororder" lazy="false">
+		<id name="orderId" column="OrderId">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="orderNo" column="OrderNo"></property>
+		<property name="orderUserId" column="orderUserId"></property>
+		<property name="customName" column="customName"></property>
+		<property name="customList" column="customList"></property>
+		<property name="customMobile" column="customMobile"></property>
+		<property name="customEmail" column="customEmail"></property>
+		<property name="customFax" column="customFax"></property>
+		<property name="customZip" column="customZip"></property>
+		<property name="customAddress" column="customAddress"></property>
+		<property name="customRemark" column="customRemark"></property>
+		<property name="status" column="status"></property>
+		<property name="orderOper" column="orderOper"></property>
+		<property name="groupId" column="groupId"></property>
+		<property name="teamName" column="teamName"></property>
+		<property name="manNum" column="manNum"></property>
+		<property name="childNum" column="childNum"></property>
+		<property name="assemble" column="assemble"></property>
+		<property name="startDate" column="startDate" type="date"></property>
+		<property name="startDateStr" column="startDateStr"></property>
+		<property name="endDate" column="endDate" type="date"></property>
+		<property name="endDateStr" column="endDateStr"></property>
+		<property name="orderDate" column="orderDate" type="date"></property>
+		<property name="orderDateStr" column="orderDateStr"></property>
+		<property name="manPriceList" column="manPriceList"></property>
+		<property name="childrenPriceList" column="childrenPriceList"></property>
+		<property name="allCost" column="allCost"></property>
+		<property name="shouldCost" column="shouldCost"></property>
+		<property name="dyjId" column="dyjId"></property>
+		<property name="dyjPrice" column="dyjPrice"></property>
+		<property name="flexId" column="flexId"></property>
+		<property name="isNew" column="isNew"></property>
+		<many-to-one name="bakTeam" column="BackTeamId" class="com.yeoou.tour.model.BakTeam" lazy="false"></many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,321 @@
+
+html
+{
+	SCROLLBAR-HIGHLIGHT-COLOR: buttonface; 
+	SCROLLBAR-SHADOW-COLOR: buttonface; 
+	SCROLLBAR-3DLIGHT-COLOR: buttonhighlight; 
+	SCROLLBAR-TRACK-COLOR: #FFF;
+	SCROLLBAR-DARKSHADOW-COLOR: buttonshadow;
+		
+}
+body 
+{
+    padding:0;
+    text-align: center;
+    margin:0;
+    font-size:12px;
+    font-family:宋体;
+    overflow: hidden;
+    /*filter:Gray;*/
+}
+/*a,input,div
+{
+	opacity:100;
+    -moz-opacity:100;
+    filter:alpha(opacity=100);
+}*/
+
+form
+{
+    margin:0;
+    padding:0;
+}
+strong
+{
+	font-weight: normal;
+}
+textarea
+{
+	overflow: auto;
+}
+/*超链接*/
+a:link,
+a:visited,
+span.href
+{
+    color:#0C75C6;
+    font-size:12px;
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+p em
+{
+	font-style:italic;
+}
+p u
+{
+	text-decoration:underline;
+}
+p strong
+{
+	font-weight:bold;
+	font-size:14px;
+}
+a:hover
+{
+    color:#333;
+    font-size:12px;
+}
+.selected:link,
+.selected:visited,
+.selected:hover
+{
+    color:#FFF;
+    background:#FF4000;
+    text-decoration:none;
+}
+#SystemAjaxWorking
+{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	font-size: 12px;
+	background: Gray;
+	color:#FFF;
+	padding: 3px 4px;
+}
+/*列表*/
+ul, li
+{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+select
+{
+	font-size: 12px;
+	height: 20px;
+	padding: 0px;
+}
+/*文本框*/
+.textbox{
+	border:1px solid #5D97CD;
+	background-color:#F5FEFF;
+	height:18px;
+}
+.textBox_bgnone
+{
+	border:1px solid #5D97CD;
+	background-color:#FFFFFF;
+	height:18px;
+	}
+.textbox_long{
+	border:1px solid #5D97CD;
+	background-color:#F5FEFF;
+	height:18px;
+	width:96%;
+}
+.textbox_long_caption{
+	border:1px solid #5D97CD;
+	background-color:#F5FEFF;
+	height:18px;
+	width:55%;
+}
+/*只读控件*/
+.readonly 
+{
+	border-left:solid 0px #000000;
+	border-right:solid 0px #000000; 
+	border-top:solid 0px #000000;
+	border-bottom:1px solid #5D97CD;
+	text-align:center;
+	width: 50px;
+}
+
+/*按钮*/
+.button
+{
+    color: #fff;
+    height: 20px;
+    border: 1px solid #1E5B9A;
+    background-color: #87BAEF;
+    background-image: url(images/clb_button.gif);
+    padding: 3px 1px 1px 1px;
+    cursor: hand;
+    font-size: 12px;
+}
+
+.button_two_caption
+{
+	color: black;
+    height: 23px;
+    border: 0px solid #1E5B9A;
+    background-image: url(images/buttonlist2.gif);
+    padding:2px 5px 2px 10px ;
+    cursor: hand;
+    font-size: 12px;
+    width:60px;
+    background-color:#FFFFFF;
+}
+
+.button_four_caption
+{
+	color: black;
+    height: 23px;
+    border: 0px solid #1E5B9A;
+    background-image: url(images/listbutton4.gif);
+    cursor: hand;
+    font-size: 12px;
+    width:85px;
+    padding:2px 5px 2px 10px ;
+    background-color:#FFFFFF;
+}
+
+.button_six_caption
+{
+	color: black;
+    height: 23px;
+    border: 0px solid #1E5B9A;
+    background-image: url(images/buttonlist6.gif);
+    cursor: hand;
+    font-size: 12px;
+    width:100px;
+    padding:2px 3px 2px 12px ;
+    background-color:#FFFFFF;
+}
+
+.bigbt{
+	font-size: 12px;
+	padding: 5px 5px 3px 5px;
+	font-weight: bold;
+	color: darkred;
+}
+
+/*日期按钮*/
+.calbutton
+{
+    border:none;
+    background: #F5FEFF url(images/sysicon.gif) no-repeat 1px 1.5px;
+    width:22px;
+    height:20px;
+    border: 1px solid #5D97CD;
+    cursor:pointer;
+}
+.selectarrow
+{
+    border:none;
+    background: #F5FEFF url(images/select_arrow.gif) no-repeat -1px 0px;
+    width:19px;
+    height:20px;
+    border: 1px solid #5D97CD;
+    cursor:pointer;
+}
+/*高亮字*/
+.highlight
+{
+    color:#FF3300;
+}
+/*绿色字*/
+.greentext
+{
+    color:green;
+}
+/*蓝色字*/
+.bluetext
+{
+    color:blue;
+}
+/*灰色字*/
+.graytext
+{
+	color: #CCC;	
+}
+/*粗体*/
+.boldtext
+{
+	font-weight: bold;
+}
+/*表格*/
+
+
+/*TDZT_LineRefManage Css*/
+
+
+
+
+/*End TDZT_LineRefManage Css*/
+
+/*tablelist样式适用于数据绑定的列表，与普通的table样式区分开来，
+ tablelist大部分样式继承自table。区别是tablelist支持鼠标停留行时，背景色改变*/
+.tablelist,
+.table
+{
+    border-collapse : collapse;
+    border:solid 1px #66869B;
+    width:98%;
+}
+.tablelist tbody tr
+{
+	background-color:#FFF; 
+    cursor:default;
+}
+        
+.table td,
+.tablelist td
+{
+    border:solid 1px #EEEEEE;
+    line-height:20px;
+    padding: 2px 5px;
+    text-align: left;
+}
+
+.table td.none,
+.tablelist td.none
+{
+    border:0;
+    line-height:20px;
+    padding: 2px 5px;
+    text-align: left;
+}
+
+
+.tablelist thead td,
+.tablelist .thead td,
+.tablelist td.head,
+.table thead td,
+.table .thead td,
+.table td.head
+{
+    text-align:center;
+    background:#EBFAFD;
+    color:#0B3A80;
+    font-weight:bold;
+     padding: 2px 5px;
+}
+.table td.rhead
+{
+    color:#0B3A80;
+}
+
+
+/*hidden样式用于隐藏控件*/
+.hidden
+{
+    display: none;
+}
+
+/* main */
+.body
+{
+    clear:both;
+    margin: 0 auto;
+}
+.main
+{	
+	float: left;
+    text-align:left;
+	margin-left: 10px;
+    color:#000;
+}
+

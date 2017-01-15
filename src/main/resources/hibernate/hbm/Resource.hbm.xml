@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.rbac.model.Resource" table="t_resources">
+			<id name="rescId" column="RescId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="Name"></property>
+			<property name="rescType" column="Res_type"></property>
+			<property name="rescString" column="Res_string"></property>
+			<set name="roles" table="t_role_resc" inverse="true" cascade="save-update" lazy="true" batch-size="3">
+				<key column="RescId"></key>
+				<many-to-many class="com.yeoou.rbac.model.Role" column="RoleId"></many-to-many>
+			</set>
+		</class>
+	</hibernate-mapping>

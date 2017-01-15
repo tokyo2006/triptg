@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.yeoou.tour.model.Order" table="t_order" lazy="false">
+		<id name="orderId" column="OrderId">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="orderNo" column="OrderNo"></property>
+		<property name="flexId" column="FlexId"></property>
+		<many-to-one name="user" column="OrderJobberId" class="com.yeoou.rbac.model.User" lazy="false"></many-to-one>
+		<many-to-one name="shopper" column="OrderShopperId" class="com.yeoou.tour.model.Shopper" lazy="false"></many-to-one>
+		<property name="teamId" column="TeamId"></property>
+		<property name="teamName" column="TeamName"></property>
+		<property name="teamNo" column="TeamNo"></property>
+		<many-to-one name="bakTeam" column="TeamBackId" class="com.yeoou.tour.model.BakTeam" lazy="false"></many-to-one>
+		<property name="customList" column="CustomList"></property>
+		<property name="hideCost" column="HideCost"></property>
+		<property name="shouldCost" column="ShouldCost"></property>
+		<property name="allCost" column="AllCost"></property>
+		<property name="assemble" column="Assemble"></property>
+		<property name="hotelNum" column="HotelNum"></property>
+		<property name="customName" column="CustomName"></property>
+		<property name="idCard" column="IdCard"></property>
+		<property name="customAddress" column="CustomAddress"></property>
+		<property name="zip" column="Zip"></property>
+		<property name="orderRemark" column="OrderRemark"></property>
+		<property name="orderOper" column="OrderOper"></property>
+		<property name="operJobberName" column="OperJobberName"></property>
+		<property name="jobberDel" column="IsJobberDel"></property>
+		<property name="shopperDel" column="IsShopperDel"></property>
+		<property name="driver" column="Driver"></property>
+		<property name="receive" column="Receive"></property>
+		<property name="seats" column="Seats"></property>
+		<property name="status" column="Status"></property>
+		<property name="orderDate" column="Date" type="date"></property>
+		<property name="orderPriceList" column="OrderPriceList"></property>
+		<property name="hotelPriceList" column="HotelPriceList"></property>
+		<property name="needcarmans" column="Needcarmans"></property>
+		<property name="createDate" column="CreateDate" type="date"></property>
+		<property name="dateStr" column="DateString"></property>
+		<property name="createDateStr" column="CreateDateStr"></property>
+		<property name="hideCustom" column="HideCustom"></property>
+		<property name="assembleTime" column="AssembleTime"></property>
+		<property name="roomAddPrice" column="RoomAddPrice"></property>
+		<property name="roomAddCnt" column="RoomAddPriceCount"></property>
+		<property name="customPhone" column="CustomPhone"></property>
+		<property name="customMobile" column="CustomMobile"></property>
+		<property name="memberName" column="MemberName"></property>
+		<property name="linkMan" column="LinkMan"></property>
+		<property name="fax" column="Fax"></property>
+		<property name="mobile" column="Mobile"></property>
+		<property name="accountReceivable" column="AccountReceivable"></property>
+		<property name="accountFact" column="AccountFact"></property>
+		<property name="shopperStatus" column="ShopperStatus"></property>
+		<property name="phone" column="Phone"></property>
+		<property name="msn" column="Msn"></property>
+		<property name="areaId" column="AreaId"></property>
+		<property name="man" column="Man"></property>
+		<property name="children" column="Children"></property>
+		<property name="hotelContent" column="HotelContent"></property>
+		<property name="total" column="Total"></property>
+	</class>
+</hibernate-mapping>

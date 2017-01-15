@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   	<class name="com.yeoou.tour.model.Notice" table="t_jnotice" lazy="false">
+	   		<id name="noticeId" column="NoticeId">
+	   			<generator class="uuid.hex"></generator>
+	   		</id>
+	   		<property name="name" column="NoticeName" ></property>
+	   		<property name="content" column="Content"></property>
+	   		<property name="docUrl" column="DocUrl"></property>
+	   		<property name="userId" column="UserId"></property>
+	   		<property name="docName" column="DocName"></property>
+	   		<property name="noticeType" column="NoticeType"></property>
+	   		<property name="noticeColor" column="NoticeColor"></property>
+			<property name="addDateStr" column="AddDateStr"></property>
+	   		<set name="areas" table="t_jnotice_area" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="NoticeId"></key>
+				<many-to-many class="com.yeoou.tour.model.Area" column="AreaId"></many-to-many>
+			</set>
+	   		<property name="addDate" column="AddDate" type="date"></property>
+	   	</class>
+	   </hibernate-mapping>

@@ -1,0 +1,18 @@
+/*
+Copyright (c) 2008, Baidu Inc. All rights reserved.
+version: 1.0.0
+*/
+
+.shop-header-mantle {background:url("../image/banner[1].jpg");}
+.shop-header-nav .selected,.my-mantle-tab .selected {background:url("../image/spr[1].gif") left top no-repeat;}
+.shop-header-nav .selected .inner-cls,.my-mantle-tab .selected a {background:url("../image/spr[1].gif") right top no-repeat;}
+.shop-header-nav .hollow {background:url("../image/spr[1].gif") 0 -100px repeat-x #71c00d;}
+.mod {border:1px solid #9bce71;}
+.mod .hd {background:url("../image/spr[1].gif") 0 -300px repeat-x #b0d481;}
+#bb-main .mod .hd {background:url("../image/spr[1].gif") 0 -200px repeat-x #4f9c0c;}
+#bb-main .mod .hd h3 {color:#fff;}
+#bb-main .mod .hd .act a {color:#fff;}
+#bb-main .mod .bd {background:url("../image/bg_mod[1].gif") repeat-x #fff;}
+.shop-profile,#bb-main .shop-profile .bd{background:url("../image/bg_profile[1].gif") 0 1px repeat-x;}
+.com-lsp #bb-main .mod {border:1px solid #9BCE71;}
+

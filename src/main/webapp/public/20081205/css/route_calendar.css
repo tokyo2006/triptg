@@ -1,0 +1,98 @@
+
+ 
+/* 线路上的发团日期日历 */ 
+	.tCal{
+		border-collapse: collapse;
+		border-color: #ccc;
+		text-align: center;
+		font-size: 12px;
+		font-family: Arial;
+		background:#fff;
+		line-height: 150%;
+	}
+		.tCal th{
+			background: #F9F9F9;
+		}
+		.tCal th .sun{
+			background: #F9F9F9;
+			color: red;
+		}
+		.tCal tbody td{
+			width: 60px!important;
+			width:57px;
+		}
+		 
+		.tCalPassed{
+			color: #CCC;
+		}	
+			
+		.date_span { 
+			 
+		}
+		.price_span {
+			color:#00f; 			
+		}
+			.tCalPassed .price_span{
+				color: #CCC;
+			}
+		.site_span {
+			position: absolute; 
+			right:1px; 
+			top:0;			  
+			font-size:10px;
+			font-family:Arial, Helvetica, sans-serif;
+  		}
+		.site_span1 {
+			font-family: "宋体",Arial, Helvetica, sans-serif;
+ 		}	
+		.tCalPrice{
+			cursor: pointer;
+		}
+			
+		.tCalToday{
+			background: #EFEFEF;
+		}
+		.tCalYuan{
+			font-size: 10px;
+		}
+		.tCalHot{
+			background: url(icon_tCalHot.gif) no-repeat 36px 3px;
+		}
+		.tCalJin{
+			background: url(icon_tCalJin.gif) no-repeat 36px 3px;
+		}
+		.tCalFlipBw{
+			position: absolute;
+			left: 0;
+			color: #00F;
+			cursor: pointer;
+		}
+		.tCalFlipFw{
+			position: absolute;
+			right: 0;
+			color: #00F;
+			cursor: pointer;
+		}
+		.tCalFlip_disabled{
+			color: #CCC;
+			cursor: default;
+		}
+		.tCalMonth{
+			font-weight: bold;
+		}
+
+.calendar_bg { position: relative;}
+
+.cred,a.cred:link,a.cred:visited{ color:#ff0000; }
+.cyellow,a.cyellow:link,a.cyellow:visited{color: #FF6600;}
+
+.calendar_bg,a.calendar_bg:link,a.calendar_bg:visited {  background:#fff; display:block; width:100%;height:100%; text-decoration:none;}
+a.calendar_bg:hover {  background:#FFC; color:#000000; display:block; width:100%;height:100%; text-decoration:none;}	
+
+a.tCalJin,a.tCalJin:link,a.tCalJin:visited{ background: url("icon_tCalJin[1].gif") no-repeat 3px 3px; }
+a.tCalJin:hover { background: url("icon_tCalJin[1].gif") no-repeat 3px 3px #FFC; }
+
+#show_cal1 a.calendar_bg:link,#show_cal1 a.calendar_bg:visited{ text-decoration:none; color:#000;}
+#show_cal1 a.calendar_bg:hover{ text-decoration:none;}
+#show_cal2 a.calendar_bg:link,#show_cal2 a.calendar_bg:visited{ text-decoration:none; color:#000;}
+#show_cal2 a.calendar_bg:hover{ text-decoration:none;}		

@@ -1,0 +1,23 @@
+
+        .icon-grid {
+            background-image:url(../images/yeoou/grid.png) !important;
+        }
+        #air-grid .x-panel-body {
+            border:1px solid #99bbe8;
+            border-top:0 none;
+        }
+        .statuscolor{
+        	color:#FF0000;
+        }
+        .add {
+            background-image:url(../images/yeoou/add.gif) !important;
+        }
+        .option {
+            background-image:url(../images/yeoou/plugin.gif) !important;
+        }
+        .remove {
+            background-image:url(../images/yeoou/delete.gif) !important;
+        }
+        .save {
+            background-image:url(../images/yeoou/save.gif) !important;
+        }

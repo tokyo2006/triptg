@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   		<class name="com.yeoou.tour.model.WebSite" table="t_site" lazy = "false">
+	   			<id name = "siteId">
+	   				<generator class="uuid.hex"></generator>
+	   			</id>
+	   			<property name="siteName"></property>
+	   			<property name="logo"></property>
+	   			<property name="title"></property>
+	   			<property name="address"></property>
+	   			<property name="zbphone"></property>
+	   			<property name="gnphone"></property>
+	   			<property name="cjphone"></property>
+	   			<property name="zjphone"></property>
+	   			<property name="bannerzb"></property>
+	   			<property name="bannergn"></property>
+	   			<property name="bannerzyx"></property>
+	   			<property name="bannercj"></property>
+	   			<property name="bannerLogo"></property>
+	   			<property name="domainName"></property>
+	   			<property name="keywords"></property>
+	   			<property name="smallLogo"></property>
+	   			<property name="desc" column="remark"></property>
+	   			<many-to-one name="area" column="areaId" class="com.yeoou.tour.model.Area"></many-to-one>
+	   		</class>
+	   </hibernate-mapping>

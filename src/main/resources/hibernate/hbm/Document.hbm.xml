@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   	<class name="com.yeoou.tour.model.Document" table="t_document" lazy="false">
+	   		<id name="docId" column="DocId">
+	   			<generator class="uuid.hex"></generator>
+	   		</id>
+	   		<property name="title" column="DocTitle"></property>
+	   		<property name="content" column="DocContent"></property>
+	   		<property name="urls" column="DocUrl"></property>
+	   		<many-to-one name="user" column="UserId" class="com.yeoou.rbac.model.User"></many-to-one>
+	   		<many-to-one name="area" column="AreaId" class="com.yeoou.tour.model.Area"></many-to-one>
+	   		<property name="num" column="Number"></property>
+	   		<property name="createTimeStr" column="AddDateStr"></property>
+	   		<property name="createTime" column="AddDate" type="date"></property>
+			<property name="docName" column="DocName"></property>
+			<set name="regions" table="t_doc_region" inverse="false" lazy="true" cascade="save-update" batch-size="3">
+				<key column="DocId"></key>
+				<many-to-many class="com.yeoou.tour.model.Region">
+					 <column name="RegionId"/>
+				</many-to-many>
+			</set>
+	   	</class>
+	   </hibernate-mapping>

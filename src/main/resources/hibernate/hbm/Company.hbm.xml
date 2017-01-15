@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   	<class name="com.yeoou.tour.model.Company" table="t_company" lazy="false">
+	   		<id name="comId" column="ComId">
+	   			<generator class="uuid.hex"></generator>
+	   		</id>
+	   		<property name="name" column="Name"></property>
+	   		<property name="desc" column="Descrip"></property>
+	   		<property name="logoUrl" column="LogoUrl"></property>
+	   		<property name="themeStyle" column="ThemeStyle"></property>
+	   		<property name="phone" column="Phone"></property>
+	   		<property name="manager" column="Manager"></property>
+	   		<property name="address" column="Address"></property>
+	   		<property name="webSite" column="WebSite"></property>
+	   		<property name="herfRegion" column="HerfRegion"></property>
+	   		<property name="email" column="Email"></property>
+	   		<property name="qq" column="QQ"></property>
+	   		<property name="check" column="Shenhe"></property>
+	   		<property name="msn" column="Msn"></property>
+	   		<set name="areas" table="t_com_area" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="ComId"></key>
+				<many-to-many class="com.yeoou.tour.model.Area" column="AreaId"></many-to-many>
+			</set>
+			<set name="regions" table="t_com_region" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="ComId"></key>
+				<many-to-many class="com.yeoou.tour.model.Region" column="RegionId"></many-to-many>
+			</set>
+			<set name="pareas" table="t_com_parea" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="ComId"></key>
+				<many-to-many class="com.yeoou.tour.model.Area" column="AreaId"></many-to-many>
+			</set>
+			<set name="pregions" table="t_com_pregion" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="ComId"></key>
+				<many-to-many class="com.yeoou.tour.model.Region" column="RegionId"></many-to-many>
+			</set>
+	   		<property name="userId" column="UserId"></property>
+	   	</class>
+	   </hibernate-mapping>

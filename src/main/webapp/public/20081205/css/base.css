@@ -1,0 +1,444 @@
+BODY {
+	FONT: small/1.4 arial,helvetica,sans-serif; TEXT-ALIGN: center
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LEGEND {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+SELECT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BUTTON {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+TABLE {
+	
+}
+INPUT {
+	FONT: 100% arial,helvetica,clean,sans-serif
+}
+SELECT {
+	FONT: 100% arial,helvetica,clean,sans-serif
+}
+BUTTON {
+	OVERFLOW: visible
+}
+TH {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+EM {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+STRONG {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+B {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+ADDRESS {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+CITE {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+LI {
+	LIST-STYLE-TYPE: none
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+FIELDSET {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+INS {
+	TEXT-DECORATION: none
+}
+#doc1 {
+	MIN-WIDTH: 760px; FONT-SIZE: 100%; MARGIN: auto; ZOOM: 1; TEXT-ALIGN: left
+}
+#doc2 {
+	MIN-WIDTH: 760px; FONT-SIZE: 100%; MARGIN: auto; ZOOM: 1; TEXT-ALIGN: left
+}
+#doc3 {
+	MIN-WIDTH: 760px; FONT-SIZE: 100%; MARGIN: auto; ZOOM: 1; TEXT-ALIGN: left
+}
+#doc1 {
+	MARGIN: auto 10px
+}
+#doc2 {
+	WIDTH: 56.98em
+}
+#doc3 {
+	WIDTH: 71.28em
+}
+.bb-l160 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l180 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l200 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l220 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l240 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l260 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l280 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l300 .bb-c {
+	FLOAT: left; TEXT-ALIGN: left
+}
+.bb-l160 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l180 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l200 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l220 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l240 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l260 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l280 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l300 #bb-main {
+	FLOAT: right; MARGIN-LEFT: -25em; WIDTH: 100%
+}
+.bb-l160 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l180 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l200 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l220 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l240 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l260 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l280 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l300 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-l160 .bb-c {
+	WIDTH: 12.01em
+}
+.bb-l160 #bb-main .bb-c {
+	MARGIN-LEFT: 13.01em
+}
+.bb-l180 .bb-c {
+	WIDTH: 13.51em
+}
+.bb-l180 #bb-main .bb-c {
+	MARGIN-LEFT: 14.51em
+}
+.bb-l200 .bb-c {
+	WIDTH: 15.01em
+}
+.bb-l200 #bb-main .bb-c {
+	MARGIN-LEFT: 16.01em
+}
+.bb-l220 .bb-c {
+	WIDTH: 16.51em
+}
+.bb-l220 #bb-main .bb-c {
+	MARGIN-LEFT: 17.51em
+}
+.bb-l240 .bb-c {
+	WIDTH: 18.01em
+}
+.bb-l240 #bb-main .bb-c {
+	MARGIN-LEFT: 19.01em
+}
+.bb-l260 .bb-c {
+	WIDTH: 19.51em
+}
+.bb-l260 #bb-main .bb-c {
+	MARGIN-LEFT: 20.51em
+}
+.bb-l280 .bb-c {
+	WIDTH: 21.01em
+}
+.bb-l280 #bb-main .bb-c {
+	MARGIN-LEFT: 22.01em
+}
+.bb-l300 .bb-c {
+	WIDTH: 22.52em
+}
+.bb-l300 #bb-main .bb-c {
+	MARGIN-LEFT: 23.52em
+}
+.bb-r160 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r180 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r200 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r220 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r240 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r260 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r280 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r300 .bb-c {
+	FLOAT: right; TEXT-ALIGN: left
+}
+.bb-r160 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r180 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r200 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r220 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r240 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r260 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r280 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r300 #bb-main {
+	FLOAT: left; WIDTH: 100%; MARGIN-RIGHT: -25em
+}
+.bb-r160 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r180 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r200 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r220 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r240 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r260 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r280 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r300 #bb-main .bb-c {
+	FLOAT: none; WIDTH: auto
+}
+.bb-r160 .bb-c {
+	WIDTH: 12.01em
+}
+.bb-r160 #bb-main .bb-c {
+	MARGIN-RIGHT: 13.01em
+}
+.bb-r180 .bb-c {
+	WIDTH: 13.51em
+}
+.bb-r180 #bb-main .bb-c {
+	MARGIN-RIGHT: 14.51em
+}
+.bb-r200 .bb-c {
+	WIDTH: 15.01em
+}
+.bb-r200 #bb-main .bb-c {
+	MARGIN-RIGHT: 16.01em
+}
+.bb-r220 .bb-c {
+	WIDTH: 16.51em
+}
+.bb-r220 #bb-main .bb-c {
+	MARGIN-RIGHT: 17.51em
+}
+.bb-r240 .bb-c {
+	WIDTH: 18.01em
+}
+.bb-r240 #bb-main .bb-c {
+	MARGIN-RIGHT: 19.01em
+}
+.bb-r260 .bb-c {
+	WIDTH: 19.51em
+}
+.bb-r260 #bb-main .bb-c {
+	MARGIN-RIGHT: 20.51em
+}
+.bb-r280 .bb-c {
+	WIDTH: 21.01em
+}
+.bb-r280 #bb-main .bb-c {
+	MARGIN-RIGHT: 22.01em
+}
+.bb-r300 .bb-c {
+	WIDTH: 22.52em
+}
+.bb-r300 #bb-main .bb-c {
+	MARGIN-RIGHT: 23.52em
+}
+.bb-ga .bb-u {
+	FLOAT: right; WIDTH: 49.4%
+}
+.bb-ga .first {
+	FLOAT: left
+}
+.bb-gb .bb-u {
+	FLOAT: right; WIDTH: 66%
+}
+.bb-gb .first {
+	FLOAT: left; WIDTH: 33%
+}
+.bb-gc .bb-u {
+	FLOAT: right; WIDTH: 33%
+}
+.bb-gc .first {
+	FLOAT: left; WIDTH: 66%
+}
+.bb-gd .bb-u {
+	FLOAT: left; MARGIN-LEFT: 1.1%; WIDTH: 32.55%
+}
+.bb-gd .first {
+	MARGIN-LEFT: 0px
+}
+#bd {
+	ZOOM: 1
+}
+.bb-g {
+	ZOOM: 1
+}
+.bb-ga {
+	ZOOM: 1
+}
+.bb-gb {
+	ZOOM: 1
+}
+.bb-gc {
+	ZOOM: 1
+}
+.bb-gd {
+	ZOOM: 1
+}
+#bd:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.bb-g:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.bb-ga:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.bb-gb:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.bb-gc:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.bb-gd:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}

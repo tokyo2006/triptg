@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- ======================== FILTER CHAIN ======================= -->
+	
+    <!--  if you wish to use channel security, add "channelProcessingFilter," in front
+         of "httpSessionContextIntegrationFilter" in the list below -->
+    <!--
+         FilterChainProxy会按顺序来调用这些filter,使这些filter能享用Spring ioc的功能,
+         CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON定义了url比较前先转为小写
+         PATTERN_TYPE_APACHE_ANT定义了使用Apache ant的匹配模式
+     -->
+	<bean id="filterChainProxy"
+		class="org.acegisecurity.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value>
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/**=httpSessionContextIntegrationFilter,logoutFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+			</value>
+		</property>
+	</bean>
+	
+	<!--
+         authenticationManager　通过Providers提供认证者列表,如果一个认证提供者失败可以尝试另外一个认证提供者,以保证获取不同来源的身份认证，如
+         DaoAuthenticationProvider 从数据库中读取用户信息验证身份
+         AnonymousAuthenticationProvider 匿名用户身份认证
+         RememberMeAuthenticationProvider 已存cookie中的用户信息身份认证
+
+         其它的还有
+         AuthByAdapterProvider 使用容器的适配器验证身份
+         CasAuthenticationProvider 根据Yale中心认证服务验证身份, 用于实现单点登陆
+         JaasAuthenticationProvider 从JASS登陆配置中获取用户信息验证身份
+         RemoteAuthenticationProvider 根据远程服务验证用户身份
+         RunAsImplAuthenticationProvider 对身份已被管理器替换的用户进行验证
+         X509AuthenticationProvider 从X509认证中获取用户信息验证身份
+         TestingAuthenticationProvider 单元测试时使用
+
+         每个认证者会对自己指定的证明信息进行认证，如DaoAuthenticationProvider仅对UsernamePasswordAuthenticationToken这个证明信息进行认证。
+     -->
+	<bean id="authenticationManager"
+		class="org.acegisecurity.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="daoAuthenticationProvider" />
+				<bean
+					class="org.acegisecurity.providers.anonymous.AnonymousAuthenticationProvider">
+					<property name="key" value="changeThis" />
+				</bean>
+				<bean
+					class="org.acegisecurity.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="changeThis" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+    <!--
+         httpSessionContextIntegrationFilter　每次request前 HttpSessionContextIntegrationFilter从Session中获取Authentication对象，在request完后
+         又把Authentication对象保存到Session中供下次request使用,此filter必须其他Acegi filter前使用
+     -->
+	<bean id="httpSessionContextIntegrationFilter"
+		class="org.acegisecurity.context.HttpSessionContextIntegrationFilter" />
+
+ 	<!--
+         logoutFilter负责退出登陆并且保存remember-me cookie
+     -->
+	<bean id="logoutFilter"
+		class="org.acegisecurity.ui.logout.LogoutFilter">
+		<constructor-arg value="/loginOut.shtml" />
+		<!-- URL redirected to after logout -->
+		<constructor-arg>
+			<list>
+				<ref bean="rememberMeServices" />
+				<bean
+					class="org.acegisecurity.ui.logout.SecurityContextLogoutHandler" />
+			</list>
+		</constructor-arg>
+		<property name="filterProcessesUrl">
+			<value>/j_acegi_logout</value>
+		</property>
+	</bean>
+
+	<!-- 
+	　　　自动监听 AuthenticationEvent 信息
+	-->
+	<bean id="loggerListener"
+		class="org.acegisecurity.event.authentication.LoggerListener" />
+
+	<!--
+         authenticationProcessingFilter　和servlet spec差不多,处理登陆请求
+         authenticationFailureUrl定义登陆失败时转向的页面
+         defaultTargetUrl定义登陆成功时转向的页面
+         filterProcessesUrl定义登陆请求的页面
+         rememberMeServices用于在验证成功后添加cookie信息
+     -->
+	<bean id="authenticationProcessingFilter"
+		class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilter">
+		<property name="authenticationManager"
+			ref="authenticationManager" />
+		<property name="authenticationFailureUrl"
+			value="/login/error.jsp" />
+		<property name="defaultTargetUrl" value="/login.shtml" />
+		<property name="filterProcessesUrl"
+			value="/j_acegi_security_check" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+	
+	<!-- 
+		用于处理HTTP头的认证信息，如从Spring远程协议(如Hessian和Burlap)或普通的浏览器如IE,Navigator的HTTP头中获取用户信息，
+		将他们转交给通过authenticationManager属性装配的认证管理器。如果认证成功，会将一个Authentication对象放到会话中，
+		否则，如果认证失败，会将控制转交给认证入口点(通过authenticationEntryPoint属性装配)
+	-->
+   <bean id="basicProcessingFilter" class="org.acegisecurity.ui.basicauth.BasicProcessingFilter">
+      <property name="authenticationManager"><ref local="authenticationManager"/></property>
+      <property name="authenticationEntryPoint"><ref local="basicProcessingFilterEntryPoint"/></property>
+   </bean>
+
+   <bean id="basicProcessingFilterEntryPoint" class="org.acegisecurity.ui.basicauth.BasicProcessingFilterEntryPoint">
+      <property name="realmName"><value>Contacts Realm</value></property>
+   </bean>
+   
+    <!--
+         securityContextHolderAwareRequestFilter　通过装饰模式，装饰的HttpServletRequest对象。
+         其Wapper是ServletRequest包装类HttpServletRequestWrapper的子类(如:SavedRequestAwareWrapper或SecurityContextHolderAwareRequestWrapper)，
+         附上获取用户权限信息，request参数，headers 和 cookies 的方法
+     -->
+	<bean id="securityContextHolderAwareRequestFilter"
+		class="org.acegisecurity.wrapper.SecurityContextHolderAwareRequestFilter" />
+
+ 	<!--
+         　rememberMeProcessingFilter　会当SecurityContextHolder中不存在Authentication.用户授权信息，
+         rememberMeProcessingFilter就会调用autoLogin()方法从cookie中获取用户信息,在验证filter之前使用
+     -->
+	<bean id="rememberMeProcessingFilter"
+		class="org.acegisecurity.ui.rememberme.RememberMeProcessingFilter">
+		<property name="authenticationManager"
+			ref="authenticationManager" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+	
+	 <!--
+         rememberMeServices　提供rememberMe功能
+         登陆验证时：登陆成功后会调用loginSuccess方法，在cookie里面保留用户信息，
+         格式为：username + ":" + expiryTime + ":" + Md5Hex(username + ":" + expiryTime + ":" + password + ":" + key)
+         访问页面时：rememberMeProcessingFilter会调用autoLogin方法，在cookie中获取用户信息
+     -->
+	<bean id="rememberMeServices"
+		class="org.acegisecurity.ui.rememberme.TokenBasedRememberMeServices">
+		<property name="userDetailsService" ref="userDetailsService" />
+		<property name="key" value="changeThis" />
+	</bean>
+
+	 <!--
+         anonymousProcessingFilter：如果不存在任何授权信息时，自动添加匿名用户身份至SecurityContextHolder中
+     -->
+	<bean id="anonymousProcessingFilter"
+		class="org.acegisecurity.providers.anonymous.AnonymousProcessingFilter">
+		<property name="key" value="changeThis" />
+		<property name="userAttribute"
+			value="anonymousUser,ANONYMOUS" />
+	</bean>
+
+	<!-- 
+	　　　　exceptionTranslationFilter异常转换过滤器，主要是处理AccessDeniedException
+	　　　　和AuthenticationException，将给每个异常找到合适的"去向" 
+	-->
+	<bean id="exceptionTranslationFilter"
+		class="org.acegisecurity.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<bean
+				class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+				<property name="loginFormUrl" value="/login.jsp" />
+				<property name="forceHttps" value="false" />
+			</bean>
+		</property>
+		<property name="accessDeniedHandler">
+			<bean
+				class="org.acegisecurity.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/login/accessDenied.jsp" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 
+	　　　passwordEncoder　使用Md5算法加密 
+	-->
+	<bean id="passwordEncoder"
+		class="org.acegisecurity.providers.encoding.Md5PasswordEncoder" />
+
+	<!--
+		daoAuthenticationProvider　提供用户授权信息，
+         userDetailsService 定义jdbcDaoImpl从数据库获取用户信息
+         userCache ehcache缓存user信息。
+         passwordEncoder 取得密码后作加密
+     -->
+	<bean id="daoAuthenticationProvider"
+		class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService" />
+		<property name="userCache" ref="userCache" />
+		<property name="passwordEncoder" ref="passwordEncoder" />
+	</bean>
+	
+	
+	<!--
+         filterInvocationInterceptor在执行转向url前检查objectDefinitionSource中设定的用户权限信息
+         过程：
+         首先，objectDefinitionSource中定义了访问URL需要的属性信息(这里的属性信息仅仅是标志，告诉accessDecisionManager要用哪些voter来投票)
+         然后，authenticationManager掉用自己的provider来对用户的认证信息进行校验。
+         最后，有投票者根据用户持有认证和访问url需要的属性，调用自己的voter来投票，决定是否允许访问。
+     -->
+	<bean id="filterInvocationInterceptor"
+		class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager"
+			ref="authenticationManager" />
+		<property name="accessDecisionManager">
+			<bean class="org.acegisecurity.vote.AffirmativeBased">
+				<property name="allowIfAllAbstainDecisions"
+					value="false" />
+				<property name="decisionVoters">
+					<list>
+						<bean class="org.acegisecurity.vote.RoleVoter" />
+						<bean
+							class="org.acegisecurity.vote.AuthenticatedVoter" />
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="objectDefinitionSource"
+			ref="filterDefinitionSource" />
+	</bean>
+	
+	<!-- 
+	　　　methodSecurityInterceptor在执行方法前进行拦截，检查用户权限信息
+	-->
+	<bean id="securityInterceptor"
+		class="org.acegisecurity.intercept.method.aopalliance.MethodSecurityInterceptor">
+		<property name="validateConfigAttributes">
+			<value>false</value>
+		</property>
+		<property name="authenticationManager">
+			<ref local="authenticationManager" />
+		</property>
+		<property name="accessDecisionManager">
+			<ref local="accessDecisionManager" />
+		</property>
+		<property name="runAsManager">
+			<ref local="runAsManager" />
+		</property>
+		<property name="objectDefinitionSource">
+			<ref local="objectDefinitionSource" />
+		</property>
+	</bean>
+	
+	<!-- 
+	　　An access decision manager used by the business objects
+	-->
+	<bean id="accessDecisionManager"
+		class="org.acegisecurity.vote.UnanimousBased">
+		<property name="allowIfAllAbstainDecisions">
+			<value>false</value>
+		</property>
+		<property name="decisionVoters">
+		<list>
+				<ref local="roleVoter" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- An access decision voter that reads ROLE_* configuaration settings -->
+	<bean id="roleVoter" class="org.acegisecurity.vote.RoleVoter" />
+
+	<!-- RunAsManager -->
+	<bean id="runAsManager"
+		class="org.acegisecurity.runas.RunAsManagerImpl">
+		<property name="key">
+			<value>my_run_as_password</value>
+		</property>
+	</bean>
+	
+	<!-- ================= Springside Extends == -->
+	<!--
+		从cache中获取Url资源信息
+	-->
+	<bean id="filterDefinitionSource"
+		class="com.yeoou.components.acegi.intercept.web.CacheBaseUrlDefinitionSource">
+		<property name="convertUrlToLowercaseBeforeComparison"
+			value="true" />
+		<property name="useAntPath" value="true" />
+		<property name="protectAllResource" value="false"/>
+		<property name="acegiCacheManager" ref="acegiCacheManager" />
+	</bean>
+	
+	<!--
+		从cache中获取Method资源信息
+	-->
+	<bean id="objectDefinitionSource"
+		class="com.yeoou.components.acegi.intercept.method.CacheBaseMethodDefinitionSource">
+		<property name="acegiCacheManager" ref="acegiCacheManager" />
+	</bean>
+
+	<!--
+		登陆时从缓存里获取用户
+	-->
+	<bean id="userDetailsService"
+		class="com.yeoou.components.acegi.InCacheDaoImpl">
+		<property name="userCache" ref="userCache" />
+	</bean>
+
+	<!--
+		通过数据库方式获取User 和 Resource 实例
+	-->
+	<bean id="authenticationService"
+		class="com.yeoou.components.acegi.service.DaoAuthenticationService">
+		<property name="dataSource" ref="dataSource" />
+
+		<property name="loadUsersQuery">
+			<value>select Name,Password,Valid from t_user</value>
+		</property>
+		<property name="authoritiesByUsernameQuery">
+			<value>
+				select r.Name from t_user u,t_roles r,t_user_role ur
+				where u.Id = ur.Id and r.RoleId = ur.RoleId and u.Name
+				= ?
+			</value>
+		</property>
+
+		<property name="loadResourcesQuery">
+			<value>select Res_string, Res_type from t_resources</value>
+		</property>
+		<property name="authoritiesByResourceQuery">
+			<value>
+				select r.Name from t_resources c,t_roles
+				r,t_role_resc rc where c.Id = rc.RescId and r.RoleId =
+				rc.RoleId and c.Res_string = ?
+			</value>
+		</property>
+
+	</bean>
+
+	<bean name="userCache"
+		class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache">
+		<property name="cache">
+			<bean
+				class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+				<property name="cacheManager" ref="cacheManager" />
+				<property name="cacheName" value="userCache" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="resourceCache"
+		class="com.yeoou.components.acegi.cache.EhCacheBasedResourceCache"
+		autowire="byName">
+		<property name="cache">
+			<bean
+				class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+				<property name="cacheManager" ref="cacheManager" />
+				<property name="cacheName" value="resourceCache" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+			<value>
+				classpath:spring/ehcache.xml
+			</value>
+		</property>
+	</bean>
+
+	<bean id="acegiCacheManager"
+		class="com.yeoou.components.acegi.cache.AcegiCacheManagerFactoryBean">
+		<property name="userCache" ref="userCache" />
+		<property name="resourceCache" ref="resourceCache" />
+		<property name="authenticationService"
+			ref="authenticationService" />
+	</bean>
+
+	<!-- 
+		设置需要securityInterceptor来判断权限的类
+	-->
+	<bean id="autoProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="proxyTargetClass" value="true" />
+		<property name="interceptorNames">
+			<list>
+				<idref local="securityInterceptor" />
+			</list>
+		</property>
+		<property name="beanNames">
+			<list>
+			    <idref bean="userService"/>
+			    <idref bean="roleService"/>
+			    <idref bean="rescService"/>
+			</list>
+		</property>
+	</bean>
+
+</beans>

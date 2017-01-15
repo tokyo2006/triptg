@@ -1,0 +1,131 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="clientDestination" namespace="/destination" extends="struts-default">
+		<action name="cityDetail" class="clientAreaAction" method="getCity">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/destination/cityDetail.ftl</result>
+		</action>
+		<action name="proviceDetail" class="clientAreaAction" method="getClientProvince">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/destination/proviceDetail.ftl</result>
+		</action>
+		<action name="countryDetail" class="clientAreaAction" method="getClientCountry">
+			<result name="china" type="freemarker">/WEB-INF/ftl/client/destination/china.ftl</result>
+			<result name="foreign" type="freemarker">/WEB-INF/ftl/client/destination/countryDetail.ftl</result>
+		</action>
+		<action name="continent" class="clientAreaAction" method="getClientContinent">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/destination/continent.ftl</result>
+		</action>
+		<action name="getAreaPic" class="clientPictureAction" method="getAreaPicture">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/picture/destination.ftl</result>
+		</action>
+	</package>
+	
+	<package name="clientScenery" namespace="/scenery" extends="struts-default">
+		<action name="sceneryDetail" class="clientSceneryAction" method="getSingleScenry">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/scenery/seneryDetail.ftl</result>
+		</action>
+		<action name="sceneryList" class="clientSceneryAction" method="getAllScenery">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/scenery/sceneryList.ftl</result>
+		</action>
+		<action name="getSceneryPic" class="clientPictureAction" method="getSceneryPictrue">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/picture/destination.ftl</result>
+		</action>
+	</package>
+	<package name="clientTeam" namespace="/team" extends="struts-default">
+		<action name="teamContent" class="clientTeamAction" method="getSingleTeam">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/team/teamContent.ftl</result>
+			
+		</action>
+		<action name="s" class="clientTeamAction" method="getAllTeam">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/team/teamList.ftl</result>
+			<result name="all" type="redirect-action">go</result>
+		</action>
+		<action name="go" class="clientTeamAction" method="getAllRegion">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/team/regionList.ftl</result>
+		</action>
+		<action name="getCanderTeam" class="clientTeamAction" method="getCanderTeam">
+			<result name="success">/result.jsp</result>
+		</action>
+		<action name="removeHistoryTeam" class="clientTeamAction" method="clearCookie">
+			<result name="success">/result.jsp</result>
+		</action>
+		<action name="getPrintTeam" class="clientTeamAction" method="getPrintTeam">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/team/teamPrint.ftl</result>
+		</action>
+		<action name="addMessage" class="clientTeamAction" method="addMessage">
+			<result name="success">/result.jsp</result>
+		</action>
+	</package>
+	
+	<package name="clientOrder" namespace="/buy" extends="struts-default">
+		<action name="step1" class="clientDoorOrderAction" method="addOrderStepOne">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/order/buyStep1.ftl</result>
+		</action>
+		<action name="step2" class="clientDoorOrderAction" method="addOrderStepTwo">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/order/buyStep2.ftl</result>
+		</action>
+		<action name="confirm" class="clientDoorOrderAction" method="addOrder">
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="token" />
+			<result name="invalid.token" type="freemarker">/WEB-INF/ftl/client/order/error.ftl</result>
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/order/buyConfirm.ftl</result>
+			
+		</action>
+		
+	</package>
+	
+	<package name="clientVisa" namespace="/visa" extends="struts-default">
+		<action name="visaList" class="clientVisaAction" method="getAllArea">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/visa/visaList.ftl</result>
+		</action>
+		<action name="visaDetail" class="clientVisaAction" method="getVisabyNation">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/visa/visaDetail.ftl</result>
+		</action>
+	</package>
+	
+	<package name="clientNews" namespace="/news" extends="struts-default">
+		<action name="contentList" class="clientNewsAction" method="getNewsListByNewsType">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/news/newsList.ftl</result>
+		</action>
+		<action name="content" class="clientNewsAction" method="getSingleNews">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/news/newsContent.ftl</result>
+		</action>
+	</package>
+	
+	<package name="clientHome" namespace="/homePage" extends="struts-default">
+		<action name="index" class="clientPageAction" method="getHomePageInf">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/index.ftl</result>
+		</action>
+		<action name="indexZb" class="clientPageAction" method="getZbInf">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/indexZb.ftl</result>
+		</action>
+		<action name="indexZyx" class="clientPageAction" method="getZyxInf">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/indexZyx.ftl</result>
+		</action>
+		<action name="indexGny" class="clientPageAction" method="getGnyInf">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/indexGny.ftl</result>
+		</action>
+		<action name="indexCjy" class="clientPageAction" method="getCjyInf">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/indexCjy.ftl</result>
+		</action>
+		<action name="indexQy" class="clientPageAction" method="getQytdInf">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/indexQy.ftl</result>
+		</action>
+		<action name="indexCsjd" class="clientPageAction" method="getCsjdInf">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/indexCsjd.ftl</result>
+		</action>
+		<action name="help" class="clientNewsAction" method="getHelpInfo">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/help.ftl</result>
+		</action>
+		<action name="helpContent" class="clientNewsAction" method="getSingleHelp">
+			<result name="success" type="freemarker">/WEB-INF/ftl/client/homePage/helpContent.ftl</result>
+		</action>
+	</package>
+	<package name="clientSearch" namespace="/" extends="struts-default">
+		<action name="search" class="clientSearchAction" method="getSearchPath">
+			<result name="success"></result>
+		</action>
+	</package>
+</struts>

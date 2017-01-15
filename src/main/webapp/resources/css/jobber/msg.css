@@ -1,0 +1,61 @@
+.msgDiv{
+	BORDER-RIGHT: #455690 1px solid; 
+	BORDER-TOP: #a6b4cf 1px solid; 
+	Z-INDEX: 99999; 
+	LEFT: 840px; 
+	VISIBILITY: hidden; 
+	BORDER-LEFT: #a6b4cf 1px solid; 
+	WIDTH: 180px; 
+	BORDER-BOTTOM: #455690 1px solid; 
+	POSITION: absolute; 
+	TOP: 483px; 
+	HEIGHT: 116px; 
+	BACKGROUND-COLOR: #c9d3f3
+}
+.msgDiv .msgTab{
+	BORDER-TOP: #ffffff 1px solid; 
+	BORDER-LEFT: #ffffff 1px solid
+}
+.msgDiv .msgTab .msgTd1{
+	FONT-SIZE: 12px; 
+	BACKGROUND-IMAGE: url(msgTopBg.gif); 
+	COLOR: #0f2c8c
+}
+.msgDiv .msgTab .msgTd2{
+	PADDING-LEFT: 4px; 
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 12px; 
+	BACKGROUND-IMAGE: url(msgTopBg.gif); 
+	COLOR: #1f336b; 
+	PADDING-TOP: 4px
+}
+.msgDiv .msgTab .msgTd3{
+	PADDING-RIGHT: 2px; 
+	BACKGROUND-IMAGE: url(msgTopBg.gif); 
+	PADDING-TOP: 2px
+}
+
+.msgDiv .msgTab .msgTd4{
+	PADDING-RIGHT:1px; 
+	BACKGROUND-IMAGE:url(1msgBottomBg.jpg); 
+	PADDING-BOTTOM: 1px
+}
+
+.msgDiv .msgTab .msgTd4 .innerDiv{
+	BORDER-RIGHT:#b9c9ef 1px solid; 
+	PADDING-RIGHT: 13px; 
+	BORDER-TOP: #728eb8 1px solid; 
+	PADDING-LEFT: 13px; 
+	FONT-SIZE: 12px; 
+	PADDING-BOTTOM: 13px; 
+	BORDER-LEFT: #728eb8 1px solid; 
+	WIDTH: 100%; 
+	COLOR: #1f336b; 
+	PADDING-TOP: 18px; 
+	BORDER-BOTTOM: #b9c9ef 1px solid; 
+	HEIGHT: 100%
+}
+
+.msgDiv .msgTab .msgTd4 .innerDiv .innnerDiv2{
+	WORD-BREAK: break-all
+}

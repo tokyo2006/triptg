@@ -1,0 +1,227 @@
+/*190px right fixed column*/
+.fp-column-t1 {zoom:1;margin-bottom:1em;}
+.fp-column-t1:after {content:".";display:block;visibility:hidden;height:0;clear:both;}
+.fp-column-t1 .main {width:750px;float:left;display:inline;}
+.fp-column-t1 .side {width:190px;float:right;display:inline;}
+
+.header-tab .selected {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/sprites_fp.gif) left top no-repeat #73c10e; }
+.header-tab .selected a {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/sprites_fp.gif) right top no-repeat;}
+
+/*mods*/
+.mod {}
+.mod .hd {}
+.mod .hd h3 {font-weight:bold;font-size:108%;}
+.mod .hd .act {float:right;font-size:93%;}
+
+.fp-mod1 {border:1px solid #a5dc78;margin-bottom:1em;}
+.fp-mod1 .hd {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) repeat-x #a5dc78;border-top:1px solid #fff;padding:.2em .5em;}
+.fp-mod1 .hd h3 {font-weight:bold;font-size:108%;color:#276200;}
+.fp-mod1 .hd .act {float:right;font-size:93%;}
+.fp-mod1 .hd .act a {color:#276200;text-decoration:none;}
+
+.fp-mod2 {border:1px solid #fcd274;margin-bottom:1em;}
+.fp-mod2 .hd {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) repeat-x 0 -100px #face66;border-top:1px solid #fff;padding:.2em .5em;}
+.fp-mod2 .hd h3 {font-weight:bold;font-size:108%;color:#b62604;}
+.fp-mod2 .hd .act {float:right;font-size:93%;}
+.fp-mod2 .hd .act a {color:#b62604;text-decoration:none;}
+
+.fp-mod3 {border:1px solid #ccc;margin-bottom:1em;}
+.fp-mod3 .hd {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) repeat-x 0 -200px #e4e4e4;border-top:1px solid #fff;padding:.2em .5em;}
+.fp-mod3 .hd h3 {font-weight:bold;font-size:108%;color:#333;}
+.fp-mod3 .hd .act {float:right;font-size:93%;}
+.fp-mod3 .hd .act a {color:#333;text-decoration:none;}
+
+.fp-mod4 {margin-bottom:1em;}
+.fp-mod4 a {text-decoration:none;}
+.fp-mod4 a:hover {text-decoration:underline;}
+.fp-mod4 .hd {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) repeat-x;padding:.2em 1em;}
+.fp-mod4 .hd h3 {font-weight:bold;font-size:108%;color:#333;}
+.fp-mod4 .hd .act {float:right;font-size:93%;color:#fff;}
+.fp-mod4 .hd .act a {color:#fff;}
+.fp-mod4 .bd  a {color:#666;}
+.fp-mod4 .bd .l {width:15.3846em;*width:15.0138em;float:left;margin:0;}
+.fp-mod4 .bd .l img {vertical-align:bottom;}
+.fp-mod4 .bd .r {width:535px;float:right;}
+.fp-mod4 .bd .ul1 {margin-top:.5em;}
+.fp-mod4 .bd .ul1 li {width:19.8%;float:left;font-size:93%;}
+.fp-mod4 .bd .ul1 li img {display:block;margin:0 auto .3em auto;}
+.fp-mod4 .bd .ul1 li a {width:92px;height:134px;display:inline-block;padding:8px 0 0 0;text-align:center;cursor:pointer;_cursor:hand;}
+.fp-mod4 .bd .ul1 li em {display:block;width:75px;margin:auto;}
+.fp-mod4 .bd .ul1 li a:hover {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/fp_bg5.gif) no-repeat;text-decoration:none;}
+.fp-mod4 .bd .ul1 li a:hover em {font-weight:bold;}
+.fp-mod4 .bd .ul2 li {width:49%;float:left;font-size:93%;line-height:1.6;}
+.fp-mod4 .bd .ul2 li a {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_bullet7.gif) 0 center no-repeat;zoom:1;padding-left:10px;}
+.fp-mod4 .bd .rowb {border-top:1px dashed #d3d3d3;padding-top:1em;margin-right:1em;}
+.fp-mod4 .bd .rowb .img {float:left;width:6.5em;margin-left:.5em;}
+.fp-mod4 .bd .rowb .ul2 {float:right;width:31.5em;}
+
+
+.fp-mod5 {border:1px solid #d3d3d3;margin-bottom:1em;}
+.fp-mod5 .hd {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) 0 -200px repeat-x #e5e5e5;border:1px solid #fff;padding:.2em .8em;*padding:.2em .8em .1em .8em;}
+.fp-mod5 .hd h3 {font-weight:bold;font-size:108%;color:#fe6603;}
+.fp-mod5 .hd .act {float:right;font-size:93%;}
+
+
+#fp-cm1 {border:1px solid #e36666;}
+#fp-cm1 .hd {background-position:0 -400px;background-color:#fc5051;border-top:1px solid #febdbd;border-left:1px solid #ffd4db;border-bottom:1px solid #d31a1c;}
+#fp-cm1 .hd h3 {color:#fff;}
+
+#fp-cm2 {border:1px solid #7c919c;}
+#fp-cm2 .hd {background-position:0 -500px;background-color:#55727f;border-top:1px solid #9fb5bc;border-left:1px solid #d5f1fb;border-bottom:1px solid #879ba5;}
+#fp-cm2 .hd h3 {color:#fff;}
+
+#fp-cm3 {border:1px solid #fcaf19;}
+#fp-cm3 .hd {background-position:0 -600px;background-color:#ffa416;border-top:1px solid #fedf8f;border-left:1px solid #fecf78;border-bottom:1px solid #fcaf19;}
+#fp-cm3 .hd h3 {color:#fff;}
+#fp-cm3 .hd .act,#fp-cm3 .hd .act a {color:#930;}
+
+#fp-new {margin-top:4px;*margin-top:1px;border:1px solid #d3d3d3;margin-bottom:1em;}
+#fp-new .hd {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) 0 -200px repeat-x #e5e5e5;border:1px solid #fff;padding:.2em .8em;*padding:.2em .8em .1em .8em;}
+#fp-new .hd h3 {font-weight:bold;font-size:108%;color:#fe6603;}
+#fp-new .hd .act {float:right;font-size:93%;}
+#fp-new ul {margin:.5em 1em;}
+#fp-new li {font-size:93%;line-height:1.5;}
+#fp-new li a {color:#444;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/dot.gif) 0 center no-repeat;padding-left:8px;}
+
+#fp-renew {border:1px solid #d3d3d3;}
+#fp-renew .hd {background:none;}
+#fp-renew .hd li {float:left;font-size:12px;line-height:25px;width:49.5%;text-align:center;font-size:14px;font-weight:bold;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp3.gif) 0 -600px repeat-x;}
+#fp-renew .hd li a {display:block;line-height:25px;zoom:1;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp3.gif) no-repeat;text-indent:14px;}
+#fp-renew .hd li.s1 a {color:#2e5e05;background-position:7px -497px;}
+#fp-renew .hd li.s2 a {color:#fe6603;background-position:7px -547px;}
+#fp-renew .hd li.s2 {border-left:1px solid #ccc;}
+#fp-renew .hd li.current {background:0;}
+
+
+#fp-pay {margin-top:1.3em;*margin-top:.9em;}
+#fp-pay p {font-size:93%;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/fp_ico2.gif) 0 0 no-repeat;padding:0 0 0 62px;margin:1.1em .5em;}
+#fp-pay strong {font-weight:bold;}
+
+#fp-mantle .l {float:left;width:230px;display:inline;}
+#fp-mantle .r {float:right;width:510px;display:inline;}
+#fp-mantle .slider {margin-bottom:1em;}
+#fp-mantle .slider img {vertical-align:bottom;}
+
+#fp-scroller {}
+#fp-scroller .bbp-nav {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) repeat-x 0 -100px #face66;padding-left:1.5em;}
+#fp-scroller .bbp-nav li {float:left;font-size:108%;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/sprites_fp.gif) right -196px no-repeat;}
+#fp-scroller .bbp-nav li.first {background-image:none;}
+#fp-scroller .bbp-nav li.selected {background:#fff;border-left:1px solid #fcd275;border-right:1px solid #fcd275;}
+#fp-scroller .bbp-nav li.selected a {color:#c63;}
+#fp-scroller .bbp-nav li a em {font-weight:bold;}
+#fp-scroller .bbp-nav li a {color:#b62604;text-decoration:none;padding:.15em 1.2em;float:left;}
+
+#fp-scroller .bbp-content {padding:1.1em .8em;}
+#fp-scroller .bbp-content li {float:left;text-align:center;width:25%;*width:24.9%;font-size:93%;}
+#fp-scroller .bbp-content li img {display:block;margin:0 auto .3em auto;}
+#fp-scroller .bbp-content li em {display:block;color:red;font-weight:bold;}
+#fp-scroller .bbp-content li a {color:#000;text-decoration:none;width:100px;display:inline-block;}
+#fp-scroller .bbp-content li a:hover {text-decoration:underline;}
+
+#fp-scroller .bd {position:relative;zoom:1;}
+#fp-scroller .bd .act-backward {position:absolute;width:6px;height:59px;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/fp_bg3.gif) -6px 0 no-repeat;left:0;top:33%;cursor:pointer;_cursor:hand;}
+#fp-scroller .bd .act-forward {position:absolute;width:6px;height:59px;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/fp_bg3.gif) no-repeat;right:0;top:33%;cursor:pointer;_cursor:hand;}
+ 
+#fp-notice {margin-bottom:.5em;}
+#fp-notice .hd {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) 0 -300px repeat-x #4e9d0c;border-top:1px solid #fff;padding:.2em 1em;}
+#fp-notice .hd h3 {font-weight:bold;font-size:93%;color:#fff;}
+#fp-notice .hd .act {float:right;font-size:93%;}
+#fp-notice .hd .act a {color:#fff;text-decoration:none;}
+#fp-notice .bd {padding:.7em;padding-bottom:0;}
+#fp-notice .img {float:left;margin-right:.8em;}
+#fp-notice li {font-size:93%;line-height:1.4;}
+#fp-notice li a {color:#666;text-decoration:none;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_bullet2.gif) 0 center no-repeat;padding-left:8px;zoom:1;}
+#fp-notice li a.highlight {background-image:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_bullet7.gif);color:red;}
+#fp-notice li a:hover {text-decoration:underline;}
+
+#fp-popular {margin-top:1em;color:#666;}
+#fp-popular .bd {font-size:93%;}
+#fp-popular li a {color:#666;}
+#fp-popular .pop1 {margin:0 .5em;padding:.8em 0 .6em 0;border-bottom:1px dashed #d4d4d4;}
+#fp-popular .pop1 li {width:33.3%;float:left;text-align:center;}
+#fp-popular .pop1 li img {display:block;margin:auto;margin-bottom:.3em;width:60px;height:60px;}
+#fp-popular .pop2 {margin:0 .6em;padding:.5em 0;line-height:1.6;}
+#fp-popular .pop2 span {float:right;}
+#fp-popular .pop2 b {font-weight:bold;color:red;}
+#fp-popular .popbuy {text-align:center;padding:.5em 0 .6em 0;*padding:.5em 0 1em 0;}
+#fp-popular .ul1 a {width:auto;}
+
+#fp-button{margin-top:-.3em;}
+#fp-button li {margin-top:.5em;}
+#fp-button li.first {margin-top:0;}
+
+#fp-category {border:1px solid #c0c3c7;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/fp_bg7.gif) 0 2.5em repeat-x #fff;margin-bottom:1em;}
+#fp-category a {text-decoration:none;}
+#fp-category a:hover {text-decoration:underline;}
+#fp-category .hd ul {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp1.gif) repeat-x 0 -200px #e5e5e5;padding-left:1.5em;}
+#fp-category .hd li {float:left;font-size:108%;font-weight:bold;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/sprites_fp.gif) right -394px no-repeat;position:relative;top:-1px;}
+#fp-category .hd li a {padding:.2em 2.5em .2em 2.5em;float:left;color:#000;}
+#fp-category .hd li.first {background-image:none;}
+#fp-category .hd li.selected {border:1px solid #50b008;border-bottom:2px solid #73c10e;z-index:2;}
+#fp-category .hd li.selected a {border:1px solid #bbe182;border-bottom:0;background:#73c10e;color:#fff;text-decoration:none;}
+#fp-category .hd .bot {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_sp_hd.gif) top repeat-x;height:5px;position:relative;top:-3px;}
+#fp-category .bd {padding:.5em 0 0 .5em;_padding:0 0 0 .5em;}
+#fp-category .bd {margin-left:-.5em;overflow:hidden;}
+#fp-category .bd li {width:32.3%;float:left;font-size:108%;font-weight:bold;border-left:1px dotted #c0c3c7;margin-left:-1px;padding:.53em 0 0 .5em;*padding:.4em 0 0 .5em;color:#666;}
+#fp-category .bd li ul {margin:0 0 .7em -.5em;overflow:hidden;zoom:1;}
+#fp-category .bd li li {width:auto;font-size:12px;font-weight:normal;border-left:1px solid #bfbfbf;padding:0 .6em;line-height:1.22;margin-top:.1em;}
+#fp-category .bd .zebra {background:#e8f8d6;}
+
+#fp-help {width:230px;float:left;}
+#fp-help li {}
+#fp-help li.split {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_dotline1.gif) center repeat-x;height:15px;font-size:0;}
+
+#fp-info {width:510px;float:right;}
+#fp-info .bd {padding:.8em .5em;}
+#fp-info .ul1 {float:left;width:68%;}
+#fp-info .ul1 li {width:33%;float:left;font-size:93%;text-align:center;}
+#fp-info .ul1 li img {display:block;margin:0 auto .3em auto;}
+#fp-info .ul1 li a {color:#333;text-decoration:none;}
+#fp-info .ul1 li a:hover {text-decoration:underline;}
+#fp-info .ul1 li a em {display:block;width:100px;margin:auto;}
+#fp-info .fp-ul2 {float:left;margin:0;width:30%;margin-left:2%;}
+#fp-info li.split {background:none;height:10px;font-size:0;}
+
+/*list*/
+.fp-ul1 {margin:.92em 1em 1em 1em;*margin:.45em 1em 1em 1em;}
+.fp-ul1 a {text-decoration:none;color:#414141;}
+.fp-ul1 a:hover {text-decoration:underline;}
+.fp-ul1 li {font-size:93%;padding:.4em .5em;border-top:1px solid #ccc;position:relative;zoom:1;}
+.fp-ul1 li:after {content:".";visibility:hidden;display:block;height:0;clear:both;}
+.fp-ul1 .num {font-weight:bold;color:#eb6100;margin-right:.5em;}
+.fp-ul1 .trend {position:absolute;font-size:10px;right:0;top:.3em;color:red;}
+.fp-ul1 .trend span {width:5px;height:9px;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp2.gif) no-repeat;display:-moz-inline-box;display:inline-block;margin-left:.3em;}
+.fp-ul1 .trend .up {}
+.fp-ul1 .trend .down {background-position:0 -100px;}
+.fp-ul1 .trend .default {background-position:0 -48px;}
+.fp-ul1 .first {border-top:0;padding-bottom:.5em;}
+.fp-ul1 .first .num {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp2.gif) no-repeat 0 -150px;display:-moz-inline-box;display:inline-block;width:15px;height:15px;line-height:15px;color:#fff;text-align:center;float:left;}
+.fp-ul1 .first img {float:left;margin-right:.5em;}
+.fp-ul1 .first .trend {top:auto;bottom:.4em;}
+
+.fp-ul2 {margin:1em;}
+.fp-ul2 a {text-decoration:none;}
+.fp-ul2 a:hover {text-decoration:underline;}
+.fp-ul2 li {font-size:93%;background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_sp2.gif) no-repeat 0 -242px;padding-left:10px;zoom:1;line-height:1.4;}
+
+.fp-mantle-slider {border:1px solid #d4d4d4;}
+.fp-mantle-slider .thumb {float:right;margin:0 5px 0 0;}
+.fp-mantle-slider .thumb li {width:96px;height:63px;margin-top:7px;cursor:pointer;_cursor:hand;}
+.fp-mantle-slider .thumb li.first {margin-top:0;}
+.fp-mantle-slider .thumb li.selected {background:url(http://co.youa.baidu.com/picture/r/mall/p/0811/img/bg_fp_slider1.gif) no-repeat;}
+.fp-mantle-slider .thumb li img {width:83px;height:57px;margin:3px 0 0 10px;border:1px solid #ccc;}
+.fp-mantle-slider .thumb li.selected img {border:0;}
+.fp-mantle-slider .number {display:none;}
+.fp-mantle-slider .enlarge {float:left;width:405px;_width:396px;height:285px;overflow:hidden;}
+.fp-mantle-slider .enlarge img {width:410px;height:285px;}
+
+/*misc*/
+.fp-ad {margin-bottom:.85em;margin-bottom:.45em;*margin-bottom:.46em;_margin-bottom:.55em;vertical-align:middle;}
+.fp-ad img {vertical-align:bottom;}
+
+
+div.unselected { display:none; }
+div.selected { display:block; }
+
+
+.pheader {margin-top:1.5em;}

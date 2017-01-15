@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   		<class name="com.yeoou.tour.model.IPRouter" table="t_ipcount" lazy="false">
+	   			<id name="ipId">
+	   				<generator class="uuid.hex"></generator>
+	   			</id>
+	   			<property name="endIp"></property>
+	   			<property name="startIp"></property>
+	   			<property name="areaId"></property>
+	   			<property name="reUrl"></property>
+	   			<property name="startIpStr"></property>
+	   			<property name="endIpStr"></property>
+	   		</class>
+	   </hibernate-mapping>

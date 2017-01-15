@@ -1,0 +1,114 @@
+/* CSS Document */
+/*��ҳ�е�������*/
+.mon .addtab{
+
+}
+
+.mon .addtab .HLeft{
+width:40px;
+height:26px;
+background:url(../images/shopper/add-head-left.png) no-repeat bottom left;
+border:0px;
+}
+
+.mon .addtab .HCenter{
+height:26px;
+height:auto;
+background:url(../images/shopper/add-head-center.png) repeat-x bottom left;
+}
+
+.mon .addtab .HRight{
+height:26px;
+width:40px;
+background:url(../images/shopper/add-head-right.png) no-repeat bottom right;
+}
+
+.mon .addtab .MLeft{
+width:40px;
+height:400;
+background:url(../images/shopper/add-left.png) repeat-y top left;
+}
+
+.mon .addtab .Mright{
+width:40px;
+height:400;
+background:url(../images/shopper/add-right.png) repeat-y top right;
+}
+
+.mon .addtab .FLeft{
+width:40px;
+height:26px;
+background:url(../images/shopper/add-foot-left.png) no-repeat bottom left;
+}
+
+.mon .addtab .FCenter{
+height:26px;
+height:auto;
+background:url(../images/shopper/add-foot-center.png) repeat-x bottom left;
+}
+
+.mon .addtab .FRght{
+height:26px;
+width:40px;
+background:url(../images/shopper/add-foot-right.png) no-repeat bottom right;
+}
+
+.DestinationTr{
+height:30px;
+text-align:center;
+}
+
+/* CSS Document */
+/*�ڶ�ҳ�еĵ�������*/
+.addparent .addtab{
+
+}
+
+.addparent .addtab .HLeft{
+width:40px;
+height:26px;
+background:url(../images/shopper/add-head-left.png) no-repeat bottom left;
+border:0px;
+}
+
+.addparent .addtab .HCenter{
+height:26px;
+height:auto;
+background:url(../images/shopper/add-head-center.png) repeat-x bottom left;
+}
+
+.addparent .addtab .HRight{
+height:26px;
+width:40px;
+background:url(../images/shopper/add-head-right.png) no-repeat bottom right;
+}
+
+.addparent .addtab .MLeft{
+width:40px;
+height:400;
+background:url(../images/shopper/add-left.png) repeat-y top left;
+}
+
+.addparent .addtab .Mright{
+width:40px;
+height:400;
+background:url(../images/shopper/add-right.png) repeat-y top right;
+}
+
+.addparent .addtab .FLeft{
+width:40px;
+height:26px;
+background:url(../images/shopper/add-foot-left.png) no-repeat bottom left;
+}
+
+.addparent .addtab .FCenter{
+height:26px;
+height:auto;
+background:url(../images/shopper/add-foot-center.png) repeat-x bottom left;
+}
+
+.addparent .addtab .FRght{
+height:26px;
+width:40px;
+background:url(../images/shopper/add-foot-right.png) no-repeat bottom right;
+}

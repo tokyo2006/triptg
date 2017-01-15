@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">
+
+
+<urlrewrite>
+<!-- 地域系统 -->
+    <rule>
+        <from>^/destination/cityDetail/(\w+).html$</from>
+        <to type="forward">/destination/cityDetail.shtml?cityId=$1</to>
+    </rule>
+    <rule>
+        <from>^/destination/cityDetail/(\w+)/(\w+).html$</from>
+        <to type="forward">/destination/cityDetail.shtml?cityId=$1&amp;pageId=$2</to>
+    </rule>
+    
+    <rule>
+        <from>^/destination/proviceDetail/(\w+).html$</from>
+        <to type="forward">/destination/proviceDetail.shtml?areaId=$1</to>
+    </rule>
+    <rule>
+        <from>^/destination/proviceDetail/(\w+)/(\w+).html$</from>
+        <to type="forward">/destination/proviceDetail.shtml?areaId=$1&amp;pageId=$2</to>
+    </rule>
+    
+    <rule>
+        <from>^/destination/countryDetail/(\w+).html$</from>
+        <to type="forward">/destination/countryDetail.shtml?areaId=$1</to>
+    </rule>
+    <rule>
+        <from>^/destination/countryDetail/(\w+)/(\w+).html$</from>
+        <to type="forward">/destination/countryDetail.shtml?areaId=$1&amp;pageId=$2</to>
+    </rule>
+     <rule>
+        <from>^/destination/getAreaPic/(\w+)$</from>
+        <to type="forward">/destination/getAreaPic.shtml?areaId=$1</to>
+    </rule>
+    <rule>
+        <from>^/destination/continent/(\w+).html$</from>
+        <to type="forward">/destination/continent.shtml?areaId=$1</to>
+    </rule>
+<!--// 地域系统 -->
+    
+<!-- 景点系统 -->
+    
+    <rule>
+        <from>^/scenery/sceneryDetail/(\w+).html$</from>
+        <to type="forward">/scenery/sceneryDetail.shtml?sceneryId=$1</to>
+    </rule>
+    <rule>
+        <from>^/scenery/sceneryDetail/(\w+)/(\w+).html$</from>
+        <to type="forward">/scenery/sceneryDetail.shtml?sceneryId=$1&amp;pageId=$2</to>
+    </rule>
+	<rule>
+        <from>^/scenery/getSceneryPic/(\w+)$</from>
+        <to type="forward">/scenery/getSceneryPic.shtml?sceneryId=$1</to>
+    </rule>
+<!--// 景点系统  -->    
+
+
+<!-- 线路系统 -->
+    
+    <rule>
+        <from>^/team/getPrintTeam/(\w+)$</from>
+        <to type="forward">/team/getPrintTeam.shtml?teamId=$1</to>
+    </rule>
+<rule>
+        <from>^/team/teamContent/(\w+)$</from>
+        <to type="forward">/team/teamContent.shtml?teamId=$1</to>
+    </rule>
+	<rule>
+        <from>^/team/s/(\w+).html$</from>
+        <to type="forward">/team/s.shtml?regionId=$1</to>
+    </rule>
+   
+<!--// 线路系统  --> 
+<!-- 新闻系统 -->
+    
+    <rule>
+        <from>^/news/content/(\w+).html$</from>
+        <to type="forward">/news/content.shtml?newsId=$1</to>
+    </rule>
+    <rule>
+        <from>^/news/content/(\w+)/(\w+).html$</from>
+        <to type="forward">/news/content.shtml?newsId=$1&amp;pageId=$2</to>
+    </rule>
+  
+	<rule>
+        <from>^/news/contentList/(\w+).html$</from>
+        <to type="forward">/news/contentList.shtml?typeId=$1</to>
+    </rule>
+   
+<!--// 新闻系统  --> 
+
+<!-- 帮助系统 -->
+    
+    <rule>
+        <from>^/homePage/helpContent/(\w+).html$</from>
+        <to type="forward">/homePage/helpContent.shtml?newsId=$1</to>
+    </rule>
+	<rule>
+        <from>^/homePage/help/(\w+).html$</from>
+        <to type="forward">/homePage/help.shtml?typeId=$1</to>
+    </rule>
+    
+   
+<!--// 帮助系统  --> 
+<!-- 签证系统 -->
+    <rule>
+        <from>^/visa/visaDetail/(\w+).html$</from>
+        <to type="forward">/visa/visaDetail.shtml?visaId=$1</to>
+    </rule>
+   
+<!--// 签证系统  --> 
+<!-- 首页跳转 -->
+    <rule>
+        <from>^/index.html$</from>
+        <to type="forward">/homePage/index.shtml</to>
+    </rule>
+	<rule>
+        <from>^/indexZb.html$</from>
+        <to type="forward">/homePage/indexZb.shtml</to>
+    </rule>
+	<rule>
+        <from>^/indexGny.html$</from>
+        <to type="forward">/homePage/indexGny.shtml</to>
+    </rule>
+	<rule>
+        <from>^/indexCjy.html$</from>
+        <to type="forward">/homePage/indexCjy.shtml</to>
+    </rule>
+	<rule>
+        <from>^/indexZyx.html$</from>
+        <to type="forward">/homePage/indexZyx.shtml</to>
+    </rule>
+	<rule>
+        <from>^/indexQy.html$</from>
+        <to type="forward">/homePage/indexQy.shtml</to>
+    </rule>
+	<rule>
+        <from>^/visa/visaList.html$</from>
+        <to type="forward">/visa/visaList.shtml</to>
+    </rule>
+	<rule>
+        <from>^/indexCsjd.html$</from>
+        <to type="forward">/homePage/indexCsjd.shtml</to>
+    </rule>
+<!--// 首页跳转  --> 
+</urlrewrite>

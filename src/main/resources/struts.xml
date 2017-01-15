@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Some or all of these can be flipped to true for debugging -->
+    <constant name="struts.i18n.reload" value="true" />
+    <constant name="struts.objectFactory" value="true"></constant>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <constant name="struts.action.extension" value="true" />
+    <constant name="struts.custom.i18n.resources" value="i18n.MyResource" /> 
+    <constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.ui.templateDir" value="template" />
+	<constant name="struts.ui.templateSuffix" value="ftl" />
+    <include file ="struts-default.xml" />   
+	<include file="struts-tour-route.xml"></include>
+	<include file="struts-tour-client.xml"></include>
+	<include file="struts-tour-acegi.xml"></include>
+	<!--  <include file="struts-tour-test.xml"></include>-->
+</struts>

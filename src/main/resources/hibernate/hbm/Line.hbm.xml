@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.Line" table="t_line" lazy="false">
+			<id name="lineId" column="LineId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="title" column="Title"></property>
+			<property name="subTitle" column="Subtitle"></property>
+			<property name="feeClude" column="FeeClude"></property>
+			<property name="feeUnclude" column="FeeUnclude"></property>
+			<property name="remark" column="Remark"></property>
+			<property name="safe" column="Safe"></property>
+			<property name="theme" column="Theme"></property>
+			<property name="writer" column="Writer"></property>
+			<property name="lineStar" column="LineStar"></property>
+			<property name="feature" column="Feature"></property>
+			<property name="selfBuy" column="Selfbuy"></property>
+			<property name="delFlag" column="Delflag"></property>
+			<property name="purchase" column="Purchase"></property>
+			<property name="content" column="Content"></property>
+			<property name="strDate" column="StrDate"></property>
+			<property name="picUrl" column="PicUrl"></property>
+			<property name="picArea" column="PicArea"></property>
+			<property name="contentHtml" column="ContentHtml"></property>
+			<property name="createTime" column="Ctime" type="date"></property>
+			<property name="hit" column="Hit"></property>
+			<many-to-one name="user" column="UserId" class="com.yeoou.rbac.model.User" ></many-to-one>
+			<set name="areas" table="t_passplace" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="LineId"></key>
+				<many-to-many class="com.yeoou.tour.model.Area" column="AreaId"></many-to-many>
+			</set>
+			<set name="regions" table="t_line_region" inverse="false" lazy="true" cascade="save-update" batch-size="3">
+				<key column="LineId"></key>
+				<many-to-many class="com.yeoou.tour.model.Region" column="RegionId"></many-to-many>
+			</set>
+			<set name="scenerys" table="t_line_scenery" inverse="false" lazy="true" cascade="save-update" batch-size="3">
+				<key column="LineId"></key>
+				<many-to-many class="com.yeoou.tour.model.Scenery" column="SceneryId"></many-to-many>
+			</set>
+			<set name="types" table="t_line_type" inverse="false" lazy="true" cascade="save-update" batch-size="3">
+				<key column="LineId"></key>
+				<many-to-many class="com.yeoou.tour.model.SceneryType" column="typeId"></many-to-many>
+			</set>
+		</class>
+	</hibernate-mapping>

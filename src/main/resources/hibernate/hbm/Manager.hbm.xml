@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   		<class name="com.yeoou.tour.model.Manager" table="t_manager" lazy="false">
+	   			<id name="managerId" column="ManagerId">
+	   				<generator class="uuid.hex"></generator>
+	   			</id>
+	   			<property name="userId" column="UserId"></property>
+	   			<property name="name" column="Name"></property>
+	   			<property name="idCard" column="IdCard"></property>
+	   			<property name="mobile" column="Mobile"></property>
+	   			<property name="phone" column="Phone"></property>
+	   			<property name="qq" column="QQ"></property>
+	   			<property name="msn" column="Msn"></property>
+	   			<property name="email" column="Email"></property>
+	   			<property name="areaId" column="AreaId"></property>
+	   			<property name="bossId" column="BossId"></property>
+	   		</class>
+	   </hibernate-mapping>

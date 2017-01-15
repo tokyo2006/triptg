@@ -1,0 +1,936 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="loginInf" namespace="/trader" extends="struts-default">
+	  	<action name="getOrderNews" class="doorOrderAction" method="getOrderNews">
+	  		<result name="success">/trader/result.jsp</result>
+	  	</action>
+		<action name="auths" class="acegiAction" method="auths">
+	  		<result name="success">/trader/result.jsp</result>
+	  	</action>
+	</package>
+	<package name="area" namespace="/trader/area" extends="struts-default">
+		<action name="addArea" class="areaAction" method="addArea">
+			<result name="success">/trader/area/result.jsp</result>
+		</action>
+		<action name="getAllArea" class="areaAction" method="getAllArea">
+			<result name="success">/trader/area/result.jsp</result>
+		</action>
+		<action name="getSingleArea" class="areaAction" method="getSingleArea">
+			<result name="success">/trader/area/result.jsp</result>
+		</action>
+		<action name="updateArea" class="areaAction" method="updateArea">
+			<result name="success">/trader/area/result.jsp</result>
+		</action>
+		<action name="delArea" class="areaAction" method="delArea">
+			<result name="success">/trader/area/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/area/result.jsp</result>
+		</action>
+	</package>
+	<package name="city" namespace="/trader/city" extends="struts-default">
+		<action name="getAllCity" class="areaAction" method="getAllCity">
+			<result name="success">/trader/city/result.jsp</result>
+		</action>
+		<action name="getSingleCity" class="areaAction" method="getSingleCity">
+			<result name="success">/trader/city/content.jsp</result>
+		</action>
+		<action name="updateCity" class="areaAction" method="updateCity">
+			<result name="success">/trader/city/result.jsp</result>
+		</action>
+		<action name="uploadPic" class="areaAction" method="uploadPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/city/result.jsp</result>
+			<result name="input">/trader/city/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNodeAndDepth">
+			<result name="success">/trader/city/result.jsp</result>
+		</action>
+	</package>
+	<package name="continent" namespace="/trader/continent" extends="struts-default">
+		<action name="getAllContinent" class="areaAction" method="getAllContinent">
+			<result name="success">/trader/continent/result.jsp</result>
+		</action>
+		<action name="getSingleContinent" class="areaAction" method="getSingleContinent">
+			<result name="success">/trader/continent/content.jsp</result>
+		</action>
+		<action name="updateContinent" class="areaAction" method="updateContinent">
+			<result name="success">/trader/continent/result.jsp</result>
+		</action>
+		<action name="uploadPic" class="areaAction" method="uploadPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/continent/result.jsp</result>
+			<result name="input">/trader/continent/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNodeAndDepth">
+			<result name="success">/trader/continent/result.jsp</result>
+		</action>
+	</package>
+	<package name="nation" namespace="/trader/nation" extends="struts-default">
+		<action name="getAllNation" class="areaAction" method="getAllNation">
+			<result name="success">/trader/nation/result.jsp</result>
+		</action>
+		<action name="getSingleNation" class="areaAction" method="getSingleNation">
+			<result name="success">/trader/nation/content.jsp</result>
+		</action>
+		<action name="updateNation" class="areaAction" method="updateNation">
+			<result name="success">/trader/nation/result.jsp</result>
+		</action>
+		<action name="uploadPic" class="areaAction" method="uploadPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/nation/result.jsp</result>
+			<result name="input">/trader/nation/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNodeAndDepth">
+			<result name="success">/trader/nation/result.jsp</result>
+		</action>
+	</package>
+	<package name="province" namespace="/trader/province" extends="struts-default">
+		<action name="getAllProvince" class="areaAction" method="getAllProvince">
+			<result name="success">/trader/province/result.jsp</result>
+		</action>
+		<action name="getSingleProvince" class="areaAction" method="getSingleProvince">
+			<result name="success">/trader/province/content.jsp</result>
+		</action>
+		<action name="updateProvince" class="areaAction" method="updateProvince">
+			<result name="success">/trader/province/result.jsp</result>
+		</action>
+		<action name="uploadPic" class="areaAction" method="uploadPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/province/result.jsp</result>
+			<result name="input">/trader/province/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNodeAndDepth">
+			<result name="success">/trader/province/result.jsp</result>
+		</action>
+	</package>
+	<package name="region" namespace="/trader/region" extends="struts-default">
+		<action name="addRegion" class="regionAction" method="addRegion">
+			<result name="success">/trader/region/result.jsp</result>
+		</action>
+		<action name="getAllRegion" class="regionAction" method="getAllRegion">
+			<result name="success">/trader/region/result.jsp</result>
+		</action>
+		<action name="getSingleRegion" class="regionAction" method="getSingleRegion">
+			<result name="success">/trader/region/result.jsp</result>
+		</action>
+		<action name="updateRegion" class="regionAction" method="updateRegion">
+			<result name="success">/trader/region/result.jsp</result>
+		</action>
+		<action name="delRegion" class="regionAction" method="delRegion">
+			<result name="success">/trader/region/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/region/result.jsp</result>
+		</action>
+		<action name="getRegionByNode" class="regionAction" method="getRegionChildrenByNode">
+			<result name="success">/trader/region/result.jsp</result>
+		</action>
+	</package>
+	<package name="key" namespace="/trader/key" extends="struts-default">
+		<action name="addKey" class="keyWordAction" method="addKeyWord">
+			<result name="success">/trader/key/result.jsp</result>
+		</action>
+		<action name="getAllKey" class="keyWordAction" method="getAllKeyWord">
+			<result name="success">/trader/key/result.jsp</result>
+		</action>
+		<action name="getSingleKey" class="keyWordAction" method="getSingleKeyWord">
+			<result name="success">/trader/key/result.jsp</result>
+		</action>
+		<action name="updateKey" class="keyWordAction" method="updateKeyWord">
+			<result name="success">/trader/key/result.jsp</result>
+		</action>
+		<action name="delKey" class="keyWordAction" method="delKeyWord">
+			<result name="success">/trader/key/result.jsp</result>
+		</action>
+	</package>
+	<package name="sceneryType" namespace="/trader/sceneryType" extends="struts-default">
+		<action name="addSceneryType" class="sceneryTypeAction" method="addSceneryType">
+			<result name="success">/trader/sceneryType/result.jsp</result>
+		</action>
+		<action name="getAllSceneryType" class="sceneryTypeAction" method="getAllSceneryType">
+			<result name="success">/trader/sceneryType/result.jsp</result>
+		</action>
+		<action name="getSingleSceneryType" class="sceneryTypeAction" method="getSingleSceneryType">
+			<result name="success">/trader/sceneryType/result.jsp</result>
+		</action>
+		<action name="updateSceneryType" class="sceneryTypeAction" method="updateSceneryType">
+			<result name="success">/trader/sceneryType/result.jsp</result>
+		</action>
+		<action name="delSceneryType" class="sceneryTypeAction" method="delSceneryType">
+			<result name="success">/trader/sceneryType/result.jsp</result>
+		</action>
+	</package>
+	<package name="image" namespace="/trader/image" extends="struts-default">
+		<action name="addPic" class="sceneryPicAction" method="addPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/image/result.jsp</result>
+			<result name="input">/trader/image/result.jsp</result>
+		</action>
+		<action name="getAllPic" class="sceneryPicAction" method="getAllPic">
+			<result name="success">/trader/image/result.jsp</result>
+		</action>
+		<action name="getSinglePic" class="sceneryPicAction" method="getSinglePic">
+			<result name="success">/trader/image/result.jsp</result>
+		</action>
+		<action name="updatePic" class="sceneryPicAction" method="updatePic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/image/result.jsp</result>
+			<result name="input">/trader/image/result.jsp</result>
+		</action>
+		<action name="delPic" class="sceneryPicAction" method="delPic">
+			<result name="success">/trader/image/result.jsp</result>
+		</action>
+		<action name="getSceneryInfo" class="sceneryPicAction" method="getSceneryInfo">
+			<result name="success">/trader/image/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/image/result.jsp</result>
+		</action>
+	</package>
+	<package name="scenery" namespace="/trader/scenery" extends="struts-default">
+		<action name="addScenery" class="sceneryAction" method="addScenery">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="getAllScenery" class="sceneryAction" method="getAllScenery">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="getSingleScenery" class="sceneryAction" method="getSingleScenery">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="updateScenery" class="sceneryAction" method="updateScenery">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="getSceContent" class="sceneryAction" method="getSceContent">
+			<result name="success">/trader/scenery/content.jsp</result>
+		</action>
+		<action name="updateContent" class="sceneryAction" method="updateContent">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="delScenery" class="sceneryAction" method="delScenery">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="getRegionByNode" class="regionAction" method="getRegionChildrenByNode">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="getSceneryTypeInfo" class="sceneryAction" method="getSceneryTypeInfo">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="addKeyWordList" class="sceneryAction" method="addKeyWordList">
+      		<result name="success">/trader/scenery/result.jsp</result>
+      	</action>
+		<action name="getSingleArea" class="areaAction" method="getSingleArea">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="getSenceryPic" class="sceneryAction" method="getSenceryPic">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="delPic" class="sceneryAction" method="delPic">
+			<result name="success">/trader/scenery/result.jsp</result>
+		</action>
+		<action name="addPic" class="sceneryAction" method="addPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/scenery/result.jsp</result>
+			<result name="input">/trader/scenery/result.jsp</result>
+		</action>
+	</package>
+	<package name="sceneryRegion" namespace="/trader/sceneryRegion" extends="struts-default">
+		<action name="getAllScenery" class="sceneryAction" method="getAllScenery">
+			<result name="success">/trader/sceneryRegion/result.jsp</result>
+		</action>
+		<action name="addSceneryRegion" class="sceneryAction" method="addSceneryRegion">
+			<result name="success">/trader/sceneryRegion/result.jsp</result>
+		</action>
+		<action name="updateSceneryRegion" class="sceneryAction" method="updateSceneryRegion">
+			<result name="success">/trader/sceneryRegion/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/sceneryRegion/result.jsp</result>
+		</action>
+		<action name="getRegionByNode" class="regionAction" method="getRegionChildrenByNode">
+			<result name="success">/trader/sceneryRegion/result.jsp</result>
+		</action>
+		<action name="getSceneryInfo" class="sceneryAction" method="getSceneryInfo">
+			<result name="success">/trader/sceneryRegion/result.jsp</result>
+		</action>
+	</package>
+	<package name="line" namespace="/trader/line" extends="struts-default">
+      	<action name="getChildrenByNode" class="lineAction" method="getChildrenByNode">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>		
+		<action name="getAllLine" class="lineAction" method="getAllLine">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>
+		<action name="getRegionMenuByUser" class="lineAction" method="getRegionMenuByUser">
+      		<result name="">/trader/line/result.jsp</result>
+      	</action> 
+      	<action name="getProvinceandregion" class="lineAction" method="getProvinceandregion">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action> 
+      	<action name="getCityByProvince" class="lineAction" method="getCityByProvince">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action> 
+      	<action name="getChildrenRegion" class="lineAction" method="getChildrenRegion">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>
+      	<action name="addLine" class="lineAction" method="addLine">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>
+      	<action name="getSingleLine" class="lineAction" method="getSingleLine">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>
+      	<action name="updateLine" class="lineAction" method="updateLine">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>
+      	<action name="delLine" class="lineAction" method="delLine">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>
+      	<action name="copyLineList" class="lineAction" method="copyLineList">
+      		<result name="success">/trader/line/result.jsp</result>
+      	</action>
+	  </package>
+	  <package name="jobberLine" namespace="/trader/jobberLine" extends="struts-default">
+      	<action name="getChildrenByNode" class="lineAction" method="getChildrenByNode">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action>		
+		<action name="getAllJobberLine" class="lineAction" method="getAllJobberLine">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action>
+		<action name="getRegionMenuByUser" class="lineAction" method="getRegionMenuByUser">
+      		<result name="">/trader/jobberLine/result.jsp</result>
+      	</action> 
+      	<action name="getProvinceandregion" class="lineAction" method="getProvinceandregion">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action> 
+      	<action name="getCityByProvince" class="lineAction" method="getCityByProvince">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action> 
+      	<action name="getChildrenRegion" class="lineAction" method="getChildrenRegion">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action>
+ <!--     	<action name="addLine" class="lineAction" method="addLine">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action>
+      	<action name="getSingleLine" class="lineAction" method="getSingleLine">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action>
+      	<action name="updateLine" class="lineAction" method="updateLine">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action>
+      	<action name="delLine" class="lineAction" method="delLine">
+      		<result name="success">/trader/jobberLine/result.jsp</result>
+      	</action>-->
+		<action name="getJobberInf" class="lineAction" method="jobberInfo">
+	  		<result name="success">/trader/jobberLine/result.jsp</result>
+	  	</action>
+		<action name="copyLine" class="lineAction" method="copyJobberLineList">
+	  		<result name="success">/trader/jobberLine/result.jsp</result>
+	  	</action>
+	  </package>
+	  <package name="assemble" namespace="/trader/assemble" extends="struts-default">
+		<action name="updateAssemble" class="assembleAction" method="updateAssemble">
+			<result name="success">/trader/assemble/result.jsp</result>
+		</action>
+		<action name="getSingleAssemble" class="assembleAction" method="getSingleAssemble">
+			<result name="success">/trader/assemble/result.jsp</result>
+		</action>
+		<action name="delAssemble" class="assembleAction" method="delAssemble">
+			<result name="success">/trader/assemble/result.jsp</result>
+		</action>
+		<action name="getAllAssemble" class="assembleAction" method="getAllAssemble">
+			<result name="success">/trader/assemble/result.jsp</result>
+		</action>
+		<action name="addAssemble" class="assembleAction" method="addAssemble">
+			<result name="success">/trader/assemble/result.jsp</result>
+		</action>
+	  </package>
+	  <package name="plane" namespace="/trader/ticket" extends="struts-default">
+        <action name="addPlane" class="airAction" method="addAir"> 
+            <result name="success">/trader/ticket/result.jsp</result>   
+        </action>
+        <action name="getAllPlane" class="airAction" method="getAllAir">
+            <result name="success" >/trader/ticket/result.jsp</result>
+        </action>
+        <action name="updatePlane" class="airAction" method="updateAir">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="getSinglePlane" class="airAction" method="getSingleAir">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="delPlane" class="airAction" method="delAir">
+        	<result name="success">/trader/ticket/result.jsp</result>
+        </action>
+		<action name="addBus" class="busAction" method="addBus"> 
+            <result name="success">/trader/ticket/result.jsp</result>   
+        </action>
+        <action name="getAllBus" class="busAction" method="getAllBus">
+            <result name="success" >/trader/ticket/result.jsp</result>
+        </action>
+        <action name="updateBus" class="busAction" method="updateBus">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="getSingleBus" class="busAction" method="getSingleBus">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="delBus" class="busAction" method="delBus">
+        	<result name="success">/trader/ticket/result.jsp</result>
+        </action>
+		<action name="addTrain" class="trainAction" method="addTrain"> 
+            <result name="success">/trader/ticket/result.jsp</result>   
+        </action>
+        <action name="getAllTrain" class="trainAction" method="getAllTrain">
+            <result name="success" >/trader/ticket/result.jsp</result>
+        </action>
+        <action name="updateTrain" class="trainAction" method="updateTrain">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="getSingleTrain" class="trainAction" method="getSingleTrain">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="delTrain" class="trainAction" method="delTrain">
+        	<result name="success">/trader/ticket/result.jsp</result>
+        </action>
+		<action name="addShip" class="shipAction" method="addShip"> 
+            <result name="success">/trader/ticket/result.jsp</result>   
+        </action>
+        <action name="getAllShip" class="shipAction" method="getAllShip">
+            <result name="success" >/trader/ticket/result.jsp</result>
+        </action>
+        <action name="updateShip" class="shipAction" method="updateShip">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="getSingleShip" class="shipAction" method="getSingleShip">
+            <result name="success">/trader/ticket/result.jsp</result>
+        </action>
+        <action name="delShip" class="shipAction" method="delShip">
+        	<result name="success">/trader/ticket/result.jsp</result>
+        </action>
+       </package>
+	   
+	   <package name="team" namespace="/trader/team" extends="struts-default">
+	  	<action name="getAssemble" class="teamAction" method="getAssemble">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getAirInf" class="teamAction" method="getAirInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getBusInf" class="teamAction" method="getBusInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getTrainInf" class="teamAction" method="getTrainInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getShipInf" class="teamAction" method="getShipInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getTeamLine" class="teamAction" method="getTeamLine">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="addTeam" class="teamAction" method="addTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="updateTeam" class="teamAction" method="updateTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="updateTeamBus" class="teamAction" method="updateTraffic">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="templateTeam" class="teamAction" method="templateTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="operateTeam" class="teamAction" method="operTeam">
+	  		<result name="success">/trader/jobberTeam/result.jsp</result>
+	  	</action>
+	  	<action name="updatePrice" class="teamAction" method="updatePrice">
+	  		<result name="success">/trader/jobberTeam/result.jsp</result>
+	  	</action>
+	  	<action name="getAllTeam" class="teamAction" method="getAllTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+<!--		<action name="getAllTeamCompany" class="companyAction" method="getCompany">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="getTeamArea" class="teamAction" method="getTeamArea">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		-->
+	  	<action name="delTeam" class="teamAction" method="delTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getSingleTeam" class="teamAction" method="getSingleTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="getRegionMenuByUser" class="lineAction" method="getRegionMenuByUser">
+      		<result name="success">/trader/team/result.jsp</result>
+      	</action>
+		<action name="getChildrenByNode" class="lineAction" method="getChildrenByNode">
+      		<result name="success">/trader/team/result.jsp</result>
+      	</action>
+<!-- 		<action name="getArea" class="assembleAction" method="getArea">
+      		<result name="success">/trader/team/result.jsp</result>
+      	</action>
+		<action name="updateRegionByTeam" class="regionAction" method="updateRegionByTeam">
+      		<result name="success">/trader/team/result.jsp</result>
+      	</action>
+     	<action name="addOrder" class="orderAction" method="addOrder">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/addOrderOk.ftl</result>
+      	</action>
+      	<action name="addShortOrder" class="orderAction" method="addShortOrder">
+			<result name="success" type="freemarker">/WEB-INF/ftl/addOrderOk.ftl</result>
+			<result name="error" type="freemarker">/WEB-INF/ftl/addOrderError.ftl</result>
+      	</action>
+      	<action name="getBookTeam" class="orderAction" method="getBookTeam">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/bookHelpLine.ftl</result>
+      		<result name="short" type="freemarker">/WEB-INF/ftl/bookHelpShortLine.ftl</result>
+      	</action>
+      	
+      	<action name="addFreeOrder" class="orderAction" method="addFreeOrder">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/addOrderOk.ftl</result>
+      	</action>
+      	<action name="getBookFreeTeam" class="orderAction" method="getBookFreeTeam">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/bookHelpFreeLine.ftl</result>
+      	</action>
+      	<action name="getPrintTeam" class="teamAction" method="getPrintTeam">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/teamPrint.ftl</result>
+      	</action>
+      	<action name="getPrintLine" class="teamAction" method="getPrintLine">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/linePrint.ftl</result>
+      	</action>
+      	<action name="getPrintFreeTeam" class="teamAction" method="getPrintFreeTeam">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/teamFreePrint.ftl</result>
+      	</action>
+      	<action name="getPrintFreeLine" class="teamAction" method="getPrintFreeLine">
+      		<result name="success" type="freemarker">/WEB-INF/ftl/lineFreePrint.ftl</result>
+      	</action>
+		<action name="getTeamDoc" class="teamAction" method="getTeamDocument">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="updateDoc" class="teamAction" method="addTeamDocument">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="getOrdersByTeam" class="teamAction" method="getOrdersByTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  		<result name="short">/trader/team/result.jsp</result>
+	  	</action>-->
+	  </package>
+	  <package name="jobberTeam" namespace="/trader/jobberTeam" extends="struts-default">
+	  	<action name="getAllJobberTeam" class="teamAction" method="getAllJobberTeam">
+	  		<result name="success">/trader/jobberTeam/result.jsp</result>
+	  	</action>
+		<action name="getJobberInf" class="teamAction" method="jobberInfo">
+	  		<result name="success">/trader/jobberTeam/result.jsp</result>
+	  	</action>
+		<action name="operateTeam" class="teamAction" method="operTeam">
+	  		<result name="success">/trader/jobberTeam/result.jsp</result>
+	  	</action>
+		<action name="copyTeam" class="teamAction" method="copyJobberTeam">
+	  		<result name="success">/trader/jobberTeam/result.jsp</result>
+	  	</action>
+		<action name="getSingleTeam" class="teamAction" method="getSingleTeam">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="getAssemble" class="teamAction" method="getAssemble">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getAirInf" class="teamAction" method="getAirInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getBusInf" class="teamAction" method="getBusInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getTrainInf" class="teamAction" method="getTrainInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getShipInf" class="teamAction" method="getShipInf">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+	  	<action name="getTeamLine" class="teamAction" method="getTeamLine">
+	  		<result name="success">/trader/team/result.jsp</result>
+	  	</action>
+		<action name="getRegionMenuByUser" class="lineAction" method="getRegionMenuByUser">
+      		<result name="success">/trader/jobberTeam/result.jsp</result>
+      	</action>
+		<action name="getChildrenByNode" class="lineAction" method="getChildrenByNode">
+      		<result name="success">/trader/jobberTeam/result.jsp</result>
+      	</action>
+	  </package>
+	  <package name="newsType" namespace="/trader/newsType" extends="struts-default">
+		<action name="addNewsType" class="newsTypeAction" method="addNewsType">
+			<result name="success">/trader/newsType/result.jsp</result>
+		</action>
+		<action name="getAllNewsType" class="newsTypeAction" method="getAllNewsType">
+			<result name="success">/trader/newsType/result.jsp</result>
+		</action>
+		<action name="getSingleNewsType" class="newsTypeAction" method="getSingleNewsType">
+			<result name="success">/trader/newsType/result.jsp</result>
+		</action>
+		<action name="updateNewsType" class="newsTypeAction" method="updateNewsType">
+			<result name="success">/trader/newsType/result.jsp</result>
+		</action>
+		<action name="getNewsInfo" class="newsTypeAction" method="getNewsInfo">
+			<result name="success">/trader/newsType/result.jsp</result>
+		</action>
+		<action name="getTypeByNode" class="newsTypeAction" method="getTypeByNode">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="delNewsType" class="newsTypeAction" method="deleteNewsType">
+			<result name="success">/trader/newsType/result.jsp</result>
+		</action>
+	</package>
+	<package name="news" namespace="/trader/news" extends="struts-default">
+		<action name="addNews" class="newsAction" method="addNews">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getAllNews" class="newsAction" method="getAllNews">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getSingleNews" class="newsAction" method="getSingleNews">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="updateNews" class="newsAction" method="updateNews">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getContent" class="newsAction" method="getNewsContent">
+			<result name="success">/trader/news/content.jsp</result>
+		</action>
+		<action name="updateContent" class="newsAction" method="updateContent">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="delNews" class="newsAction" method="delNews">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getTypeByNode" class="newsTypeAction" method="getTypeByNode">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getNewsTypeInfo" class="newsAction" method="getNewsTypeInfo">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getNewsTypeParent" class="newsAction" method="getNewsTypeParent">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getSingleArea" class="areaAction" method="getSingleArea">
+			<result name="success">/trader/news/result.jsp</result>
+		</action>
+		<action name="getSingleNewsType" class="newsTypeAction" method="getSingleNewsType">
+			<result name="success">/trader/newsType/result.jsp</result>
+		</action>
+		<action name="uploadPic" class="newsAction" method="uploadPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/news/result.jsp</result>
+			<result name="input">/trader/news/result.jsp</result>
+		</action>
+	</package>
+	<package name="visa" namespace="/trader/visa" extends="struts-default">
+		<action name="addVisa" class="visaAction" method="addVisa">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+		<action name="getAllVisa" class="visaAction" method="getAllVisa">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+		<action name="getSingleVisa" class="visaAction" method="getSingleVisa">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+		<action name="updateVisa" class="visaAction" method="updateVisa">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+		<action name="getSingleVisa2" class="visaAction" method="getSingleVisa2">
+			<result name="success">/trader/visa/content.jsp</result>
+		</action>
+		<action name="updVisa2" class="visaAction" method="updateZiliao">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+		<action name="delVisa" class="visaAction" method="delVisa">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+		<action name="getSingleArea" class="areaAction" method="getSingleArea">
+			<result name="success">/trader/visa/result.jsp</result>
+		</action>
+	</package>
+	<package name="page" namespace="/trader/page" extends="struts-default">
+		<action name="addPage" class="tripConfigAction" method="addTripFlag">
+			<result name="success">/trader/page/result.jsp</result>
+		</action>
+		<action name="getAllPage" class="tripConfigAction" method="getAllTripFlag">
+			<result name="success">/trader/page/result.jsp</result>
+		</action>
+		<action name="getSinglePage" class="tripConfigAction" method="getSingelTripFlag">
+			<result name="success">/trader/page/result.jsp</result>
+		</action>
+		<action name="updatePage" class="tripConfigAction" method="updateTripFlag">
+			<result name="success">/trader/page/result.jsp</result>
+		</action>
+		<action name="delPage" class="tripConfigAction" method="delTripFlag">
+			<result name="success">/trader/page/result.jsp</result>
+		</action>
+	</package>
+	<package name="pageRegion" namespace="/trader/pageRegion" extends="struts-default">
+		<action name="addPageRegion" class="tripConfigAction" method="addTripModel">
+			<result name="success">/trader/pageRegion/result.jsp</result>
+		</action>
+		<action name="getAllPageRegion" class="tripConfigAction" method="getAllTripModel">
+			<result name="success">/trader/pageRegion/result.jsp</result>
+		</action>
+		<action name="getSinglePageRegion" class="tripConfigAction" method="getSingleTripModel">
+			<result name="success">/trader/pageRegion/result.jsp</result>
+		</action>
+		<action name="updatePageRegion" class="tripConfigAction" method="updateTripModel">
+			<result name="success">/trader/pageRegion/result.jsp</result>
+		</action>
+		<action name="delPageRegion" class="tripConfigAction" method="delTripModel">
+			<result name="success">/trader/pageRegion/result.jsp</result>
+		</action>
+		<action name="getTripFlagInfo" class="tripConfigAction" method="getTripFlagInfo">
+			<result name="success">/trader/pageRegion/result.jsp</result>
+		</action>
+		<action name="getPageByNode" class="tripConfigAction" method="getTripFlagByNode">
+			<result name="success">/trader/pageRegion/result.jsp</result>
+		</action>
+	</package>
+	<package name="pageContent" namespace="/trader/pageContent" extends="struts-default">
+		<action name="addPageContent" class="tripConfigAction" method="addTripContent">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="getAllPageContent" class="tripConfigAction" method="getAllTripContent">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="getSinglePageContent" class="tripConfigAction" method="getSingleTripContent">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="updatePageContent" class="tripConfigAction" method="updateTripContent">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="delPageContent" class="tripConfigAction" method="delTripContent">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="operateContent" class="tripConfigAction" method="operateTripContent">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="uploadPic" class="tripConfigAction" method="uploadPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/pageContent/result.jsp</result>
+			<result name="input">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="getPageRegionInfo" class="tripConfigAction" method="getTripModelInfo">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="getPageSortList" class="tripConfigAction" method="getPageSortList">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/pageContent/result.jsp</result>
+		</action>
+	</package>
+	<package name="flashType" namespace="/trader/flashType" extends="struts-default">
+		<action name="addFlashType" class="tripConfigAction" method="addFlashType">
+			<result name="success">/trader/flashType/result.jsp</result>
+		</action>
+		<action name="getAllFlashType" class="tripConfigAction" method="getAllFlashType">
+			<result name="success">/trader/flashType/result.jsp</result>
+		</action>
+		<action name="getSingleFlashType" class="tripConfigAction" method="getSingleFlashType">
+			<result name="success">/trader/flashType/result.jsp</result>
+		</action>
+		<action name="updateFlashType" class="tripConfigAction" method="updateFlashType">
+			<result name="success">/trader/flashType/result.jsp</result>
+		</action>
+		<action name="delFlashType" class="tripConfigAction" method="delFlashType">
+			<result name="success">/trader/flashType/result.jsp</result>
+		</action>
+	</package>
+	<package name="flash" namespace="/trader/flash" extends="struts-default">
+		<action name="addFlash" class="tripConfigAction" method="addThemeFlash">
+			<result name="success">/trader/flash/result.jsp</result>
+		</action>
+		<action name="getAllFlash" class="tripConfigAction" method="getAllThemeFlash">
+			<result name="success">/trader/flash/result.jsp</result>
+		</action>
+		<action name="getSingleFlash" class="tripConfigAction" method="getSingleThemeFlash">
+			<result name="success">/trader/flash/result.jsp</result>
+		</action>
+		<action name="updateFlash" class="tripConfigAction" method="updateThemeFlash">
+			<result name="success">/trader/flash/result.jsp</result>
+		</action>
+		<action name="delFlash" class="tripConfigAction" method="delThemeFlash">
+			<result name="success">/trader/flash/result.jsp</result>
+		</action>
+		<action name="getFlashTypeByNode" class="tripConfigAction" method="getFlashTypeByNode">
+			<result name="success">/trader/flash/result.jsp</result>
+		</action>
+		<action name="getFlashTypeInfo" class="tripConfigAction" method="getFlashTypeInfo">
+			<result name="success">/trader/flash/result.jsp</result>
+		</action>
+		<action name="uploadFlashPic" class="tripConfigAction" method="uploadFlashPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/flash/result.jsp</result>
+			<result name="input">/trader/flash/result.jsp</result>
+		</action>
+	</package>
+	<package name="site" namespace="/trader/site" extends="struts-default">
+		<action name="addSite" class="webSiteAction" method="addWebSite">
+			<result name="success">/trader/site/result.jsp</result>
+		</action>
+		<action name="getAllSite" class="webSiteAction" method="getAllWebSite">
+			<result name="success">/trader/site/result.jsp</result>
+		</action>
+		<action name="getSingleSite" class="webSiteAction" method="getSingleWebSite">
+			<result name="success">/trader/site/result.jsp</result>
+		</action>
+		<action name="updateSite" class="webSiteAction" method="updateWebSite">
+			<result name="success">/trader/site/result.jsp</result>
+		</action>
+		<action name="delSite" class="webSiteAction" method="delWebSite">
+			<result name="success">/trader/site/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/site/result.jsp</result>
+		</action>
+		<action name="uploadPic" class="webSiteAction" method="uploadPic">
+			<interceptor-ref name="fileUpload">
+		    	<param name="allowedTypes">image/gif,image/pjpeg,image/jpeg,image/x-png,image/jpg,image/png</param>
+		    	<param name="maximumSize">512000</param>
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="savePath">/upload</param>
+			<result name="success">/trader/site/result.jsp</result>
+			<result name="input">/trader/site/result.jsp</result>
+		</action>
+	</package>
+	<package name="manager" namespace="/trader/manager" extends="struts-default">
+		<action name="addManager" class="managerAction" method="addManager">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="getAllManager" class="managerAction" method="getAllManagerByBossId">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="getSingleManager" class="managerAction" method="getSingleManager">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="updateManager" class="managerAction" method="updateManager">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="delManager" class="managerAction" method="delManager">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="getAreaByCorpId" class="managerAction" method="getAreaByCorpId">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="getRoles" class="managerAction" method="getRoles">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="getSelfManagerInfo" class="managerAction" method="getSelfManagerInfo">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="updateSelfInfo" class="managerAction" method="updateSelfInfo">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+		<action name="changePassword" class="managerAction" method="changePassword">
+			<result name="success">/trader/manager/result.jsp</result>
+		</action>
+	</package>
+	<package name="iPRouter" namespace="/trader/iPRouter" extends="struts-default">
+		<action name="addIPRouter" class="iprouterAction" method="addIPRouter">
+			<result name="success">/trader/iPRouter/result.jsp</result>
+		</action>
+		<action name="getAllIPRouter" class="iprouterAction" method="getAllIPRouter">
+			<result name="success">/trader/iPRouter/result.jsp</result>
+		</action>
+		<action name="getSingleIPRouter" class="iprouterAction" method="getSingleIPRouter">
+			<result name="success">/trader/iPRouter/result.jsp</result>
+		</action>
+		<action name="updateIPRouter" class="iprouterAction" method="updateIPRouter">
+			<result name="success">/trader/iPRouter/result.jsp</result>
+		</action>
+		<action name="delIPRouter" class="iprouterAction" method="delIPRouter">
+			<result name="success">/trader/iPRouter/result.jsp</result>
+		</action>
+		<action name="getAreaByNode" class="areaAction" method="getAreaChildrenByNode">
+			<result name="success">/trader/iPRouter/result.jsp</result>
+		</action>
+	</package>
+	<package name="order" namespace="/trader/order" extends="struts-default">
+		<action name="getAllOrder" class="doorOrderAction" method="getAllOrder">
+			<result name="success">/trader/order/result.jsp</result>
+		</action>
+		<action name="getSingleOrder" class="doorOrderAction" method="getSingleOrder">
+			<result name="success">/trader/order/result.jsp</result>
+		</action>
+		<action name="updateOrder" class="doorOrderAction" method="updateOrder">
+			<result name="success">/trader/order/result.jsp</result>
+		</action>
+	</package>
+	<package name="comment" namespace="/trader/comment" extends="struts-default">
+		<action name="updComment" class="messageAction" method="updateMessage">
+			<result name="success">/trader/comment/result.jsp</result>
+		</action>
+		<action name="getSingleComment" class="messageAction" method="getSingleMessage">
+			<result name="success">/trader/comment/result.jsp</result>
+		</action>
+		<action name="delComment" class="messageAction" method="delMessage">
+			<result name="success">/trader/comment/result.jsp</result>
+		</action>
+		<action name="getAllComment" class="messageAction" method="getAllMessage">
+			<result name="success">/trader/comment/result.jsp</result>
+		</action>
+	  </package>
+</struts>

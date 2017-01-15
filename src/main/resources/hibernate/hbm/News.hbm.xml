@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.News" table="t_news" lazy="false">
+			<id name="newsId" column="NewsId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="title" column="Title"></property>
+			<property name="subTitle" column="SubTitle"></property>
+			<property name="content" column="Content"></property>
+			<property name="publishDate" column="PublishDate" type="date"></property>
+			<property name="publishDateStr" column="PublishDateStr"></property>
+			<property name="origin" column="Origin"></property>
+			<property name="hit" column="Hit"></property>
+			<property name="writer" column="Writer"></property>
+			<property name="picUrl" column="PicUrl"></property>
+			<property name="mark" column="Mark"></property>
+			<property name="promotion" column="Promotion"></property>
+			<property name="Hot" column="hot"></property>
+			<property name="Url" column="url"></property>
+			<set name="types" table="t_news_type" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="NewsId"></key>
+				<many-to-many class="com.yeoou.tour.model.NewsType" column="TypeId"></many-to-many>
+			</set>
+			<set name="areas" table="t_news_area" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="NewsId"></key>
+				<many-to-many class="com.yeoou.tour.model.Area" column="AreaId"></many-to-many>
+			</set>
+		</class>
+	</hibernate-mapping>

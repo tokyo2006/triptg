@@ -1,0 +1,57 @@
+
+.add {
+      background-image: url(../../images/jobber/yeoou/add.gif) !important;            
+        }
+.option {
+       background-image: url(../../images/jobber/yeoou/plugin.gif) !important;
+        }
+.remove {
+       background-image: url(../../images/jobber/yeoou/delete.gif) !important;
+        }
+.save {
+       background-image: url(../../images/jobber/yeoou/save.gif) !important;
+        }
+.icon-grid {
+            background-image:url(../../images/jobber/yeoou/grid.png) !important;
+        }
+.refresh{
+	background-image: url(../../images/jobber/yeoou/done.gif) !important;
+}
+.printline
+{
+	background-image: url(../../images/jobber/yeoou/folder_go.png) !important;	
+}
+.copy{
+	background-image: url(../../images/jobber/yeoou/icon-by-category.gif) !important;
+}
+
+.notice_panel_cls1{
+	border-bottom:1px dotted #d3d3d3;line-height:23px;font-size:16px; text-align:center;
+}
+.notice_panel_cls2{
+	border-bottom:1px dotted #d3d3d3;line-height:23px;font-size:12px;text-align:center;
+}
+.notice_panel_cls3{
+	border-bottom:1px dotted #d3d3d3;line-height:23px;font-size:12px;
+}
+
+.team_order_cls1{
+	border-bottom:1px dotted #d3d3d3;line-height:23px;font-size:12px
+}
+.team_order_cls2{
+	border-bottom:2px solid #d3d3d3;line-height:23px;font-size:12px;
+}
+.team_order_cls3{
+	border-bottom:1px solid #d3d3d3;line-height:23px;font-size:12px;width:150px
+}
+.team_order_cls4{
+	border-bottom:2px solid #d3d3d3;line-height:23px;font-size:12px;width:150px
+}
+.team_order_cls3{
+	border-bottom:1px solid #d3d3d3;line-height:23px;font-size:12px;width:150px
+}
+.team_order_cls6{
+	
+}
+	
+

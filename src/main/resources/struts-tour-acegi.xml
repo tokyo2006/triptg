@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="login" namespace="/" extends="struts-default">
+		<action name="login" class="acegiAction" method="login">
+	  		<result name="sys_public" type="redirect-action">trader/logintrader</result>
+	  		<result name="success" type="redirect-action">/login/logintrader</result>
+	  	</action>
+	</package>
+	 <package name="loginTrader" namespace="/trader" extends="struts-default">
+	  	<action name="logintrader" class="acegiAction" method="login">
+	  		<result name="sys_public">/trader/index.jsp</result>
+	  	</action>
+		<action name="auths" class="acegiAction" method="auths">
+	  		<result name="success">/trader/result.jsp</result>
+	  	</action>		
+	  </package>
+</struts>

@@ -1,0 +1,123 @@
+.nav {
+	DISPLAY: block; FLOAT: left; MARGIN: 0px; WIDTH: 135px; BACKGROUND-COLOR: rgb(236,236,236)
+}
+.asdestinationlist .title {
+	DISPLAY: block; MARGIN: 0px 0px 5px; WIDTH: 135px; BACKGROUND-COLOR: rgb(236,236,236); text-align:center;
+}
+.asdestinationlist H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(../images/cp_newtop.gif) no-repeat center top; PADDING-BOTTOM: 2px; MARGIN: 0px; COLOR: white; LINE-HEIGHT: 135%; PADDING-TOP: 4px; FONT-FAMILY: "����"; TEXT-ALIGN:center
+}
+.asdestinationlist H2 A {
+	COLOR: white; TEXT-DECORATION: none
+}
+.asdestinationlist H2 A:hover {
+	TEXT-DECORATION: underline
+}
+.asdestinationlist H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(../images/cp_newtop1.gif) no-repeat center top; PADDING-BOTTOM: 2px; MARGIN: 0px; COLOR: white; LINE-HEIGHT: 135%; PADDING-TOP: 4px; FONT-FAMILY: "����"; TEXT-ALIGN: center
+}
+.asdestinationlist H4 A {
+	COLOR: white; TEXT-DECORATION: none
+}
+.asdestinationlist H4 A:hover {
+	TEXT-DECORATION: underline
+}
+.asdestinationlist H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(../images/more-stores_header.gif) no-repeat center top; PADDING-BOTTOM: 2px; MARGIN: 0px; COLOR: white; LINE-HEIGHT: 135%; PADDING-TOP: 4px; FONT-FAMILY: "����"; TEXT-ALIGN: center
+}
+.asdestinationlist H3 A {
+	COLOR: white; TEXT-DECORATION: none
+}
+.asdestinationlist H3 A:hover {
+	TEXT-DECORATION: underline
+}
+.asdestinationlist OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.asdestinationlist LI {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 6px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 0px; COLOR: #778087; LINE-HEIGHT: 135%; PADDING-TOP: 2px; FONT-FAMILY: "����"; BACKGROUND-COLOR: rgb(236,236,236)
+}
+.asdestinationlist LI A {
+	CLEAR: right; DISPLAY: block; FONT-SIZE: 12px; MARGIN: 0px; COLOR: #778087; LINE-HEIGHT: 135%; FONT-FAMILY: "����"; BACKGROUND-COLOR: rgb(236,236,236); TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.asdestinationlist LI A:hover {
+	MARGIN: 0px; TEXT-DECORATION: underline
+}
+.asdestinationlist A IMG {
+	CLEAR: right; PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; PADDING-BOTTOM: 0px! important; MARGIN: 0px; PADDING-TOP: 0px! important; TEXT-DECORATION: none
+}
+.list-end {
+	HEIGHT: 10px
+}
+#ipod_main {
+	WIDTH: 720px; TEXT-ALIGN: left
+}
+#ipod_main {
+	WIDTH: 700px; TEXT-ALIGN: left
+}
+#ipod_main P {
+	MARGIN: 0px 0px 1em
+}
+#ipod_content {
+	FLOAT: right; WIDTH: 552px
+}
+#ipod_nav {
+	FLOAT: left; WIDTH: 135px
+}
+DIV.clearer {
+	CLEAR: both; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 1px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1px; PADDING-TOP: 0px; HEIGHT: 0px
+}
+.availability {
+	FONT-SIZE: 12px; MARGIN: 0px; LINE-HEIGHT: 13px; FONT-FAMILY: "����"
+}
+P.availability {
+	MARGIN: 0.3em 0px 0.5em
+}
+SPAN.freeshipping {
+	DISPLAY: block; COLOR: #ff3300; LINE-HEIGHT: 1.4em
+}
+.loan {
+	BACKGROUND-POSITION: left top; BORDER-TOP: #999 1px solid; MARGIN-TOP: 10px; DISPLAY: block; BACKGROUND-IMAGE: url(../images/loan_icon.gif); WIDTH: 160px; COLOR: #464646; BACKGROUND-REPEAT: no-repeat
+}
+.loan P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 5px 0px 0px 30px; WIDTH: 130px; LINE-HEIGHT: 13px; PADDING-TOP: 0px
+}
+.loan P SPAN {
+	COLOR: #f30
+}
+TABLE#ipodcomptable {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 15px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+TD.title {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; MARGIN: 0px; LINE-HEIGHT: 135%; PADDING-TOP: 15px; FONT-FAMILY: "����"
+}
+TD.speclink {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; LINE-HEIGHT: 135%; PADDING-TOP: 15px; FONT-FAMILY: "����"; TEXT-ALIGN: right
+}
+BODY {
+	FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 135%; FONT-FAMILY: "����"
+}
+TABLE {
+	FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 135%; FONT-FAMILY: "����"
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 135%; FONT-FAMILY: "����"
+}
+A {
+	COLOR: #36c; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.L10 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 135%; FONT-FAMILY: "����"
+}
+.L10bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; LINE-HEIGHT: 135%; FONT-FAMILY: "����"
+}
+.L10G {
+	FONT-SIZE: 12px; COLOR: #868f98; LINE-HEIGHT: 135%; FONT-FAMILY: "����"
+}

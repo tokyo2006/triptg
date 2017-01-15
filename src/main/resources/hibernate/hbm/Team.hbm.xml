@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yeoou.tour.model.Team" table="t_team" lazy="false">
+        <id name="teamId" >
+            <column name="TeamId" length="32" />
+            <generator class="uuid.hex"></generator>
+        </id>
+        <property name="teamNum" >
+            <column name="TeamNo" length="32" />
+        </property>
+        <many-to-one name="line" column="LineId" class="com.yeoou.tour.model.Line" lazy="false"></many-to-one>
+        <many-to-one name="ticketLog" column="TicketlogId" class="com.yeoou.tour.model.TicketLog" lazy="false"></many-to-one>
+        <property name="ticketType" >
+            <column name="TicketType" />
+        </property>
+        <property name="ticketId" >
+            <column name="TicketId" length="32" />
+        </property>
+        <property name="teamday" column="Day" ></property>
+        <property name="correct" column="Correct" ></property>
+        <property name="pushDay" column="PushDay" ></property>
+        <property name="displayPrice" column="DisplayPrice" ></property>
+        <property name="groupId" column="GroupId" ></property>
+        <property name="theme" column="Theme"></property>
+        <property name="picUrl" column="PicUrl"></property>
+        <property name="confirm" column="Confirm"></property>
+        <property name="youhui" column="Youhui"></property>
+        <property name="themeColor" column="ThemeColor"></property>
+        <property name="book" column="Book"></property>
+        <property name="total" column="Total"></property>
+        <property name="shadowNum" column="ShadowNum" ></property>
+      	<property name="manPrice" column="ManPrice" ></property>
+      	<property name="childPrice" column="ChildPrice" ></property>
+        <many-to-one name="user" column="UserId" class="com.yeoou.rbac.model.User" lazy="false"></many-to-one>
+        <many-to-one name="doc" column="DocId" class="com.yeoou.tour.model.Document" lazy="false"></many-to-one>
+        <property name="startDate" type="java.util.Date">
+            <column name="Startdate" length="10" />
+        </property>
+        <many-to-one name="area" column="AreaId" class="com.yeoou.tour.model.Area" lazy="false"></many-to-one>
+        <property name="urgentTel" >
+            <column name="UrgentTel" length="50" />
+        </property>
+        <property name="assemble" column="Assemble"></property>
+        <property name="startDateStr" >
+            <column name="StartdateStr" length="32" />
+        </property>
+        <property name="hotelPrice" >
+            <column name="HotelPrice" />
+        </property>
+        <property name="hotelStar" >
+            <column name="HotelStar" length="16" />
+        </property>
+        <property name="startTime" >
+            <column name="Starttime" length="32" />
+        </property>
+        <property name="teamType" >
+            <column name="Teamtype" />
+        </property>
+        <property name="recommend" >
+            <column name="Recommend" length="8" />
+        </property>
+        <property name="newproduct" >
+            <column name="New" length="8" />
+        </property>
+        <property name="speical" >
+            <column name="Speical" length="8" />
+        </property>
+        <property name="enable">
+            <column name="Enabled" />
+        </property>
+        <property name="realDateStr" column="RealDateStr"></property>
+        <property name="realDate" column="RealDate" type="date"></property>
+        <property name="endDate">
+            <column name="Enddate" />
+        </property>
+        <property name="endDateStr">
+            <column name="EnddateStr" />
+        </property>
+        <property name="dateType">
+            <column name="DateType" />
+        </property>
+        <property name="market">
+            <column name="IsMarket" />
+        </property>
+        <property name="flag" >
+            <column name="Flag" />
+        </property>
+        <property name="shop" >
+            <column name="IsShop" />
+        </property>
+        <property name="planeGo" >
+            <column name="PlaneGo" />
+        </property>
+        <property name="planeBack" >
+            <column name="PlaneBack" />
+        </property>
+        <property name="planeTax" >
+            <column name="PlaneTax" />
+        </property>
+        <property name="hotelContent" >
+            <column name="HotelContent" length="65535" />
+        </property>
+        <property name="isNet" column="IsNet"></property>
+        <property name="comeTraffic"></property>
+        <property name="goTraffic"></property>
+        <property name="doorManPrice" column="DoorManPrice"></property>
+        <property name="doorChildPrice" column="DoorChildPrice"></property>
+        <property name="doorDisPrice" column="DoorDisPrice"></property>
+        <property name="teamName" column="TeamName"></property>
+        <property name="dyj"></property>
+        <property name="orderConfirm" column="OrderConfirm"></property>
+        <set name="areas" table="t_team_area" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="TeamId"></key>
+				<many-to-many class="com.yeoou.tour.model.Area" column="AreaId"></many-to-many>
+		</set>
+		<set name="regions" table="t_team_region" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="TeamId"></key>
+				<many-to-many class="com.yeoou.tour.model.Region" column="RegionId"></many-to-many>
+		</set>
+    </class>
+</hibernate-mapping>
+

@@ -1,0 +1,46 @@
+/*
+Copyright (c) 2008, Baidu Inc. All rights reserved.
+version: 1.0.0
+*/
+.pay-wrap {margin:0 1.5em;}
+
+
+.bank-11,.bank-101,.bank-201,.bank-301,.bank-401,.bank-501 {background:url(../image/sprite_banks.gif) no-repeat #fff;width:191px;}
+.bank-11,.bank-201 {margin-right:0;}
+.bank-11 {background-position:35px -293px;}
+.bank-101 {background-position:30px 7px;}
+.bank-201 {background-position:-870px 5px;}
+.bank-301 {background-position:-570px 6px;}
+.bank-401 {background-position:-270px 5px;}
+.bank-501 {background-position:33px -193px;}
+
+
+/*account info*/
+.account-info .item ul {margin:1em 0 0 4.5em;}
+.account-info .item li {margin-bottom:.3em;}
+.account-info {border-bottom:1px solid #ccc;}
+
+/*my info header*/
+.my-infoheader {position:relative;zoom:1;}
+.my-infoheader .my-info-title {background:url(../image/bg_sp_hd_l2.gif) top left no-repeat #73c10e;display:-moz-inline-box;display:inline-block;padding-left:2px;margin-left:1.5em;}
+.my-infoheader .my-info-title span {background:url(../image/bg_sp_hd_r2.gif) top right no-repeat;display:-moz-inline-box;display:inline-block;font-size:108%;font-weight:bold;color:#fff;padding:.4em 2em .2em 2em;}
+
+/*my info box*/
+.my-infobox2 {border:1px solid #e5e5e5;}
+.my-infobox2 .inner {margin:1.5em;}
+
+/*pay box*/
+.pay-box {font-size:108%;border:1px solid #fde164;background:#fdffea;}
+.pay-box ul {margin:1.5em 0 2em 3em;}
+.pay-box li {margin-bottom:1em;zoom:1;}
+.pay-box li:after {content:"";visibility:hidden;display:block;height:0;clear:both;}
+.pay-box li img {vertical-align:middle;}
+.pay-box .s1 {color:red;float:left;vertical-align:middle;margin:.5em 0 0 2em;}
+
+.pay-box label.k {float:left;width:8em;text-align:right;padding-right:.3em;}
+.pay-box span.v {float:left;vertical-align:middle;top:-.3em;position:relative;}
+.pay-box button {width:175px;height:37px;line-height:37px;background:url(../image/btn_payb.gif) no-repeat;font-size:16px;font-weight:bold;color:#fff;border:0;padding-left:35px;text-align:left;cursor:pointer;_cursor:hand;}
+.pay-box button.disabled{background-image:url(../image/btn_payb_disabled.gif);color:#e5e5e5;}
+
+.pay-back-btn {margin:1.5em 0;}
+.pay-back-btn a.link-back {background:url(../image/bg_pay_bkbtn.gif) 0 center no-repeat;font-size:108%;padding:.5em 0;padding-left:30px;margin-right:1em;}

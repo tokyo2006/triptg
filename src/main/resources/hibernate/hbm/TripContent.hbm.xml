@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   		<class name="com.yeoou.tour.model.TripContent" table="t_ziyuan" lazy="false">
+	   			<id name="id" column="Id">
+	   				<generator class="uuid.hex"></generator>
+	   			</id>
+	   			<property name="title" column="Title"></property>
+	   			<property name="subTitle" column="SubTitle"></property>
+	   			<property name="picUrl" column="PicUrl"></property>
+	   			<property name="url" column="Url"></property>
+	   			<property name="target" column="Target"></property>
+	   			<property name="font" column="Font"></property>
+	   			<property name="desrible" column="Describle"></property>
+	   			<property name="price" column="Price"></property>
+	   			<property name="shangjia" column="Shangjia"></property>
+	   			<many-to-one name="tripModel" column="ClassId" class="com.yeoou.tour.model.TripModel"></many-to-one>
+	   			<many-to-one name="area" column="AreaId" class="com.yeoou.tour.model.Area"></many-to-one>
+	   		</class>
+	   </hibernate-mapping>

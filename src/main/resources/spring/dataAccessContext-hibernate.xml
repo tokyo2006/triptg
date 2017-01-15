@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">
+
+	<!-- Define the data source, and using "Apache DBCP" as the conneciton pool -->
+		<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}"/>
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="user" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+		 <property name="minPoolSize"><value>1</value></property>
+  		<property name="maxPoolSize"><value>2</value></property>
+  		<property name="maxIdleTime"><value>1800</value></property>
+  		<property name="acquireIncrement"><value>2</value></property>
+  		<property name="maxStatements"><value>0</value></property>
+  		<property name="initialPoolSize"><value>1</value></property>
+  		<property name="idleConnectionTestPeriod"><value>1800</value></property>
+  		<property name="acquireRetryAttempts"><value>30</value></property>
+  		<property name="breakAfterAcquireFailure"><value>true</value></property>
+  		<property name="testConnectionOnCheckout"><value>false</value></property>
+	</bean>
+
+	<!--Hibernate SessionFatory-->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="annotatedClasses">
+			<list>
+			</list>
+		</property>
+		 <property name="mappingDirectoryLocations">        
+        <list>       
+            <value>       
+                classpath*:hibernate/hbm/
+            </value>
+        </list>                                
+        </property> 
+		<!-- 
+		<property name="entityInterceptor"> 
+            <ref local="eventLogInterceptor"/>
+        </property>
+         -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			 	<prop key="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+                <prop key="hibernate.connection.release_mode">auto</prop>                      
+                <prop key="hibernate.autoReconnect">true</prop>
+                <prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
+				<!--  <prop key="hibernate.c3p0.max_size">20</prop> 
+				<prop key="hibernate.c3p0.min_size">5</prop> 
+				<prop key="hibernate.c3p0.timeout">120</prop> 
+				<prop key="hibernate.c3p0.max_statements">100</prop> 
+				<prop key="hibernate.c3p0.idle_test_period">120</prop> 
+				<prop key="hibernate.c3p0.acquire_increment">2</prop> -->
+				<!-- hibernate缓存配置：
+				1、首先设置EhCache，建立配置文件ehcache.xml；
+				<cache name="com.xxx.pojo.Foo" maxElementsInMemory="500" eternal="false" 
+				timeToLiveSeconds="7200" timeToIdleSeconds="3600" overflowToDisk="true" />
+				2、在Hibernate配置文件中设置：
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				3、在Hbm文件中添加<cache usage="read-only"/>;
+				4、如果需要“查询缓存”，还需要在使用Query或Criteria()时设置其setCacheable(true);
+				Session s=HibernateSessionFactory.getSession();
+　　				Criteria c=s.createCriteria(Resources.class);
+　　				c.setCacheable(true);
+　　				List l=c.list();
+				HibernateSessionFactory.closeSession();
+				-->
+				
+				
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 
+	<bean id="eventLogInterceptor" class="com.yeoou.common.audit.EventLogInterceptor" > 
+        <property name="sessionFactory"><ref local="sessionFactoryAuditLog"/></property>
+    </bean>
+ -->
+	<!--Hibernate TransactionManager-->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+</beans>

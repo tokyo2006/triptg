@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.rbac.model.User" table="t_user" lazy = "false">
+			<id name="userId" column="Id">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="loginName" column="Name"></property>
+			<property name="password" column="Password"></property>
+			<property name="valid" column="Valid"></property>
+			<property name="themeStyle" column="StyleTheme"></property>
+			<property name="createTime" column="CreateTime" type="date"></property>
+			<property name="loginTime" column="LoginTime" type="date"></property>
+			<set name="roles" table="t_user_role" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+				<key column="Id"></key>
+				<many-to-many class="com.yeoou.rbac.model.Role" column="RoleId"></many-to-many>
+			</set>
+			<set name="groups" table="t_user_group" inverse="false" cascade="save-update" lazy="true" batch-size="3">
+			<key column="Id"></key>
+				<many-to-many class="com.yeoou.rbac.model.Group" column="GroupId"></many-to-many>
+			</set>
+		</class>
+	</hibernate-mapping>

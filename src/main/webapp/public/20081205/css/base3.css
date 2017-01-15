@@ -1,0 +1,103 @@
+/*
+Copyright (c) 2008, Baidu Inc. All rights reserved.
+version: alpha 0.0.1
+*/
+
+/*reset font*/
+body {font:13px/1.4 arial,helvetica,sans-serif;*font-size:small;*font:x-small;text-align:center;}
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input,textarea,select,button,th,td {margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+table {font-size:inherit;font:100%;}
+input,select {font:100% arial,helvetica,clean,sans-serif;;}
+button {overflow:visible}
+th,em,strong,b,address,cite {font-style:normal;font-weight:normal;}
+li{list-style:none;}
+img,fieldset {border:0;}
+ins {text-decoration:none;}
+
+/*
+layout
+#doc1 - 100% fluid width also sets 10px of left and right margin 
+#doc2 - 760px
+#doc3 - 950px
+*/
+#doc1,#doc2,#doc3 { margin:auto;text-align:left;min-width:760px;zoom:1;font-size:100%;}
+#doc1 {margin:auto 10px;}
+#doc2 {width:58.4615em;*width:56.9826em;}
+#doc3 {width:73.0769em;*width:71.2858em;}
+
+/*left fixed layout*/
+.bb-l160 .bb-c,.bb-l180 .bb-c,.bb-l200 .bb-c,.bb-l220 .bb-c,.bb-l240 .bb-c,.bb-l260 .bb-c,.bb-l280 .bb-c,.bb-l300 .bb-c {float:left;text-align:left;}
+.bb-l160 #bb-main,.bb-l180 #bb-main,.bb-l200 #bb-main,.bb-l220 #bb-main,.bb-l240 #bb-main,.bb-l260 #bb-main,.bb-l280 #bb-main,.bb-l300 #bb-main {float:right;width:100%;margin-left:-25em;}
+.bb-l160 #bb-main .bb-c,.bb-l180 #bb-main .bb-c,.bb-l200 #bb-main .bb-c,.bb-l220 #bb-main .bb-c,.bb-l240 #bb-main .bb-c,.bb-l260 #bb-main .bb-c,.bb-l280 #bb-main .bb-c,.bb-l300 #bb-main .bb-c {float:none;width:auto;}
+
+.bb-l160 .bb-c {width:12.3077em;*width:12.0110em;}
+.bb-l160 #bb-main .bb-c {margin-left:13.3077em;*margin-left:13.0110em;}
+
+.bb-l180 .bb-c {width:13.8462em;*width:13.5125em;;}
+.bb-l180 #bb-main .bb-c {margin-left:14.8462em;*margin-left:14.5125em;}
+
+.bb-l200 .bb-c {width:15.3846em;*width:15.0138em;}
+.bb-l200 #bb-main .bb-c {margin-left:16.3846em;*margin-left:16.0138em;}
+
+.bb-l220 .bb-c {width:16.9230em;*width:16.5152em;}
+.bb-l220 #bb-main .bb-c {margin-left:17.9230em;*margin-left:17.5152em;}
+
+.bb-l240 .bb-c {width:18.4615em;*width:18.0166em;}
+.bb-l240 #bb-main .bb-c {margin-left:19.4615em;*margin-left:19.0166em;}
+
+.bb-l260 .bb-c {width:20em;*width:19.518em;}
+.bb-l260 #bb-main .bb-c {margin-left:21em;*margin-left:20.518em;}
+
+.bb-l280 .bb-c {width:21.5385em;*width:21.0194em;}
+.bb-l280 #bb-main .bb-c {margin-left:22.5385em;*margin-left:22.0194em;}
+
+.bb-l300 .bb-c {width:23.0769em;*width:22.5208em;}
+.bb-l300 #bb-main .bb-c {margin-left:24.0769em;*margin-left:23.5208em;}
+
+
+/*right fixed layout*/
+.bb-r160 .bb-c,.bb-r180 .bb-c,.bb-r200 .bb-c,.bb-r220 .bb-c,.bb-r240 .bb-c,.bb-r260 .bb-c,.bb-r280 .bb-c,.bb-r300 .bb-c {float:right;text-align:left;}
+.bb-r160 #bb-main,.bb-r180 #bb-main,.bb-r200 #bb-main,.bb-r220 #bb-main,.bb-r240 #bb-main,.bb-r260 #bb-main,.bb-r280 #bb-main,.bb-r300 #bb-main {float:left;width:100%;margin-right:-25em;}
+.bb-r160 #bb-main .bb-c,.bb-r180 #bb-main .bb-c,.bb-r200 #bb-main .bb-c,.bb-r220 #bb-main .bb-c,.bb-r240 #bb-main .bb-c,.bb-r260 #bb-main .bb-c,.bb-r280 #bb-main .bb-c,.bb-r300 #bb-main .bb-c {float:none;width:auto;}
+
+.bb-r160 .bb-c {width:12.3077em;*width:12.0110em;}
+.bb-r160 #bb-main .bb-c {margin-right:13.3077em;*margin-right:13.0110em;}
+
+.bb-r180 .bb-c {width:13.8462em;*width:13.5125em;;}
+.bb-r180 #bb-main .bb-c {margin-right:14.8462em;*margin-right:14.5125em;}
+
+.bb-r200 .bb-c {width:15.3846em;*width:15.0138em;}
+.bb-r200 #bb-main .bb-c {margin-right:16.3846em;*margin-right:16.0138em;}
+
+.bb-r220 .bb-c {width:16.9230em;*width:16.5152em;}
+.bb-r220 #bb-main .bb-c {margin-right:17.9230em;*margin-right:17.5152em;}
+
+.bb-r240 .bb-c {width:18.4615em;*width:18.0166em;}
+.bb-r240 #bb-main .bb-c {margin-right:19.4615em;*margin-right:19.0166em;}
+
+.bb-r260 .bb-c {width:20em;*width:19.518em;}
+.bb-r260 #bb-main .bb-c {margin-right:21em;*margin-right:20.518em;}
+
+.bb-r280 .bb-c {width:21.5385em;*width:21.0194em;}
+.bb-r280 #bb-main .bb-c {margin-right:22.5385em;*margin-right:22.0194em;}
+
+.bb-r300 .bb-c {width:23.0769em;*width:22.5208em;}
+.bb-r300 #bb-main .bb-c {margin-right:24.0769em;*margin-right:23.5208em;}
+
+/*grids*/
+.bb-ga .bb-u {width:49.4%;float:right;}
+.bb-ga .first {float:left;}
+
+.bb-gb .bb-u {width:66%;float:right;}
+.bb-gb .first {float:left;width:33%;}
+
+.bb-gc .bb-u {width:33%;float:right;}
+.bb-gc .first {float:left;width:66%;}
+
+.bb-gd .bb-u {width:32.55%;float:left;margin-left:1.1%;}
+.bb-gd .first {margin-left:0;}
+
+/*self clear*/
+#bd,.bb-g,.bb-ga,.bb-gb,.bb-gc,.bb-gd {zoom:1;}
+#bd:after,.bb-g:after,.bb-ga:after,.bb-gb:after,.bb-gc:after,.bb-gd:after {content:".";display:block;visibility:hidden;height:0;clear:both;}

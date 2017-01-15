@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.City" table="t_city" lazy="false">
+			<id name="cityId" column="CityId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="content" column="Content"></property>
+			<property name="synopsis" column="Synopsis"></property>
+			<property name="gloze" column="Gloze"></property>
+			<property name="hit" column="Hit"></property>
+			<property name="isTop" column="IsTop"></property>
+			<property name="isZone" column="IsZone"></property>
+			<property name="mapUrl" column="MapUrl"></property>
+			<many-to-one name="area" class="com.yeoou.tour.model.Area" column="AreaId"></many-to-one>
+		</class>
+	</hibernate-mapping>

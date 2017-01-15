@@ -1,0 +1,176 @@
+
+.tourSection {
+	MARGIN-BOTTOM: 1.5em
+}
+.tourSection H2 {
+	FONT-SIZE: 14px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 3px; COLOR: #ff5700; BORDER-BOTTOM: #DDDDDD 1px dotted; font-weight:bold
+}
+#couponPlan {
+	MARGIN-TOP: 1em; TEXT-ALIGN: center
+}
+#couponPlan STRONG {
+	COLOR: #f60
+}
+
+#tourPlan H3 {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 50px
+}
+#tourPlan .tourPlanPlacesList {
+	MARGIN-LEFT: 55px
+}
+#tourPlan .tourPlanCity {
+	MARGIN-BOTTOM: 10px; MARGIN-LEFT: 55px; PADDING-LEFT: 10px; background:#dbf4bf;color:#888;
+}
+#tourPlan .tourPlanCity IMG {
+	MARGIN: 0px 5px
+}
+#tourPlan .tourPlanContent {
+	MARGIN-BOTTOM: 2em; MARGIN-LEFT: 55px; clear:both;
+}
+#tourPlan .tourPlanContent P {
+	MARGIN-BOTTOM: 1em
+}
+#tourPlan .tourPlanContent .tourPlanFood {
+	MARGIN-BOTTOM: 0px; COLOR: #039
+}
+#tourPlan .tourPlanContent .tourPlanHotel {
+	MARGIN-BOTTOM: 0px; COLOR: #039
+}
+#tourPlan .route_view_module {
+	MARGIN: 0px 6px 10px 0px
+}
+#tourPlan .tourPlanTrafficIcon {
+	POSITION: relative; TOP: 3px
+}
+
+
+#domestic .hotarea_info_t {
+	FONT-SIZE: 14px; BACKGROUND: url(/ui/tournew/images/hotarea_info_t_green.gif) no-repeat left bottom
+}
+
+#domestic .hotarea_info_t SPAN A:link {
+	COLOR: #6db001
+}
+#domestic .hotarea_info_t SPAN A:visited {
+	COLOR: #6db001
+}
+#domestic .hotarea_info_t SPAN A:hover {
+	COLOR: #f00
+}
+
+.route_view_module {
+	FLOAT: left; MARGIN: 0px 5px 5px; HEIGHT: 120px; TEXT-ALIGN: center
+}
+.route_view_module .placename {
+	TEXT-ALIGN: center
+}
+
+
+.route_view_module .scePic {width:100px;height:100px;border:1px solid #bbb;text-align:center;overflow:hidden;}
+.route_view_module .scePic .blank {width:0px;height:99px;*height:98px;}
+.route_view_module .scePic img {vertical-align:middle;*margin-left:-5px;}
+.reserveWrap {
+	BORDER-RIGHT: #ccc 1px dashed; BORDER-TOP: #ccc 1px dashed; FONT-SIZE: 13px; BORDER-LEFT: #ccc 1px dashed; BORDER-BOTTOM: #ccc 1px dashed; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.reserveWrap H4 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 13px; BACKGROUND: #eaf2fd; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-TOP: 5px; BORDER-BOTTOM: #b8e3ff 1px solid
+}
+.reserveInfo {
+	PADDING-BOTTOM: 5px
+}
+.reserveInfo FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+
+.fb {
+	FONT-WEIGHT: bold
+}
+.fi {
+	FONT-STYLE: italic
+}
+.tal {
+	TEXT-ALIGN: left
+}
+.tac {
+	TEXT-ALIGN: center
+}
+.tar {
+	TEXT-ALIGN: right
+}
+.cred {
+	COLOR: #ff0000
+}
+
+.cgrey {
+	COLOR: #666666
+}
+A.cgrey:link {
+	COLOR: #666666
+}
+A.cgrey:visited {
+	COLOR: #666666
+}
+.cyellow {
+	COLOR: #ff9900
+}
+A.cyellow:link {
+	COLOR: #ff9900
+}
+A.cyellow:visited {
+	COLOR: #ff9900
+}
+.cdyellow {
+	COLOR: #ff6600
+}
+A.cdyellow:link {
+	COLOR: #ff6600
+}
+A.cdyellow:visited {
+	COLOR: #ff6600
+}
+.cgreen {
+	COLOR: #4e9700
+}
+A.cgreen:link {
+	COLOR: #4e9700
+}
+
+.hidden {
+	DISPLAY: none
+}
+.clear:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.clear {
+	DISPLAY: inline-block
+}
+* HTML .clear {
+	HEIGHT: 1%
+}
+.clear {
+	DISPLAY: block
+}
+.route_t_green img { float: right}
+.route_t_green { font-size:12px; color:#666; padding:7px 10px 10px 20px; background:url(../image/route_t_green.gif) repeat-x left top;}
+.route_t_green span { color:#FF0000; font-weight:normal;}
+
+
+
+
+
+
+
+.small_class_h3{ padding-left:15px; color:#FF4400; font-size:12px; background:url(../image/main_route_list_t.gif) no-repeat left center;}
+
+#small_class_list { width:100%; color:#444444; font-size:13px;}
+#small_class_list h3 span { font-weight:normal;}
+ 
+#small_class_list a:link,#small_class_list a:visited{color: #444444;}
+#small_class_list a:hover{color: #F00;}
+
+.small_class_list_t {background:#E8FCD7; padding:3px 10px; margin-top:15px; }
+#domestic .small_class_list_t {background:#E8FDD7;}
+.small_class_list_t span { padding:2px 0;}
+.small_class_list_t a:link,.small_class_list_t a:visited{color: #444444; text-decoration:underline;}
+.small_class_list_t a:hover{color: #F00; text-decoration:underline;}
+span.customers_select { margin-left:30px;width:80px; float:right;}	

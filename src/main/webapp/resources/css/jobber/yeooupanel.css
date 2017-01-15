@@ -1,0 +1,102 @@
+html, body {
+        font:normal 12px verdana;
+        margin:0;
+        padding:0;
+        border:0 none;
+        overflow:hidden;
+        height:100%;
+    }
+	#config li{
+				margin:3px;
+				}
+	#config li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#linemanage li{
+				margin:3px;
+				}
+	#linemanage li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#tickmanage li{
+				margin:3px;
+				}
+	#tickmanage li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#ordermanage li{
+				margin:3px;
+				}
+	#ordermanage li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#infomanage li{
+				margin:3px;
+				}
+	#infomanage li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#shopmanage li{
+				margin:3px;
+				}
+	#shopmanage li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#hotelmanage li{
+				margin:3px;
+				}
+	#hotelmanage li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#advmanage li{
+				margin:3px;
+				}
+	#advmanage li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	#adminmange li{
+				margin:3px;
+				}
+	#adminmange li a{
+				color: #666688;
+				text-decoration:none;
+	}
+	p {
+	    margin:5px;
+	}
+    .settings {
+        background-image:url(../images/share/yeoou/fam/folder_wrench.png);
+    }
+    .nav {
+        background-image:url(../images/share/yeoou/fam/folder_go.png);
+    }
+	.calendar {
+    background-image:url(../images/jobber/yeoou/calendar.gif) !important;
+	}
+	
+	.blist {
+		background-image: url(../images/jobber/yeoou/list-items.gif) !important;
+	}
+	
+	.bmenu {
+		background-image: url(../images/jobber/yeoou/menu-show.gif) !important;
+	}
+	
+	.menu-title{
+		background: #ebeadb url(../images/jobber/yeoou/grid3-hrow.gif) repeat-x;
+		border-bottom:1px solid #99bbe8;
+		color:#15428b;
+		font:bold 10px tahoma,arial,verdana,sans-serif;
+		display:block;
+		padding:3px;
+	}
+	
+

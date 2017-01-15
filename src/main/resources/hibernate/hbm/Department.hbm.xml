@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   		<class name="com.yeoou.tour.model.Department" table="t_department" lazy="false">
+	   			<id name="siteId" column="SiteId">
+	   				<generator class="uuid.hex"></generator>
+	   			</id>
+	   			<property name="userId" column="UserId"></property>
+	   			<property name="manager" column="Manager"></property>
+				<property name="phone" column="Phone"></property>
+	        	<property name="email" column="Email"></property>
+	        	<property name="fullName" column="FullName"></property>
+	        	<property name="licenseNo" column="LicenseNo"></property>
+	        	<property name="tripLicenseNo" column="TripLicenseNo"></property>
+	        	<property name="mobile" column="Mobile"></property>
+	        	<property name="address" column="Address"></property>
+	        	<property name="fax" column="Fax"></property>
+	        	<property name="qq" column="QQ"></property>
+	        	<property name="msn" column="Msn"></property>
+	        	<property name="account" column="Account"></property>
+	        	<property name="areaId" column="AreaId"></property>
+	   			<many-to-one name="corp" column="ComId" class="com.yeoou.tour.model.Corporation" lazy="false"></many-to-one>
+	   		</class>
+	   </hibernate-mapping>
+

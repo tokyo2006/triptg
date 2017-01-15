@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+       <class name="com.yeoou.tour.model.Ship"  table="t_ship" lazy="false">
+           <id name="shipId" column="ShipId">
+               <generator class="uuid.hex" />
+           </id>
+           <property name="name" column="Name" type="string" />
+           <property name="begin" column="Begin" type="string"/>
+           <property name="destination" column="End" type="string"/>
+           <property name="begintime" column="Begintime" type="string"/>
+           <property name="company" column="Company" />
+           <many-to-one lazy="false" name="user" column="UserId" class="com.yeoou.rbac.model.User" />
+           <property name="total" column="Total"></property>
+           <property name="confirm" column="Confirm"></property>
+           <property name="price" column="Price"></property>
+           <property name="booked" column="Book"></property>
+           <property name="beginDate" column="BeginDate" type="date"></property>
+           <property name="beginDateStr" column="BeginDateStr"></property>
+           <property name="number" column="No"></property>
+       </class>
+   </hibernate-mapping>
+    

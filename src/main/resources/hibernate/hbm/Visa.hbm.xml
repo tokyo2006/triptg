@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.Visa" table="t_visa" lazy="false">
+			<id name="visaId" column="VisaId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="name" column="Name"></property>
+			<property name="ziliao" column="Ziliao"></property>
+			<many-to-one name="nation" class="com.yeoou.tour.model.Area" column="NationId"></many-to-one>
+			<many-to-one name="city" class="com.yeoou.tour.model.Area" column="CityId"></many-to-one>
+			<property name="interview" column="Interview"></property>
+			<property name="term" column="Term"></property>
+			<property name="cycle" column="Cycle"></property>
+			<property name="pay" column="Pay"></property>
+			<property name="advert" column="advert"></property>
+			<property name="isTopic" column="IsTopic"></property>
+			<property name="hit" column="Hit"></property>
+			<property name="createDate" column="CreateDate" type="date"></property>
+			<property name="createDateStr" column="CreateDateStr"></property>
+			<property name="writter" column="Writer"></property>
+		</class>
+	</hibernate-mapping>

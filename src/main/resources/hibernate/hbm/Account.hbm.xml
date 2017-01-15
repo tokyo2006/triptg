@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	<hibernate-mapping>
+		<class name="com.yeoou.tour.model.Account" table="t_account" lazy="false">
+			<id name="accountId" column="AccountId">
+				<generator class="uuid.hex"></generator>
+			</id>
+			<property name="accountOut" column="AccountOut"></property>
+			<property name="areaId" column="AreaId"></property>
+			<property name="remark" column="Remark"></property>
+			<property name="createTime" column="CreateTime"></property>
+			<property name="CreateTimeStr" column="CreateTimeStr"></property>
+			<many-to-one name="user" column="UserId" class="com.yeoou.rbac.model.User" ></many-to-one>
+			<property name="accountIn" column="AccountIn"></property>
+		</class>
+	</hibernate-mapping>

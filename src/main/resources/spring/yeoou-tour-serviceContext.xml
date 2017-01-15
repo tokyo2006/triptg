@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">	
+    <bean id="areaService" class="com.yeoou.tour.service.impl.AreaService" />
+    <bean id="cityService" class="com.yeoou.tour.service.impl.CityService" />
+    <bean id="provinceService" class="com.yeoou.tour.service.impl.ProvinceService" />
+    <bean id="continentService" class="com.yeoou.tour.service.impl.ContinentService" />
+    <bean id="nationService" class="com.yeoou.tour.service.impl.NationService" />
+    <bean id="regionService" class="com.yeoou.tour.service.impl.RegionService" />
+    <bean id="sceneryService" class="com.yeoou.tour.service.impl.SceneryService" />
+    <bean id="keyWordService" class="com.yeoou.tour.service.impl.KeyWordService" />
+    <bean id="sceneryTypeService" class="com.yeoou.tour.service.impl.SceneryTypeService" />
+	<bean id="sceneryPicService" class="com.yeoou.tour.service.impl.SceneryPicService" />
+	<bean id="lineService" class="com.yeoou.tour.service.impl.LineService" />
+	<bean id="assembleService" class="com.yeoou.tour.service.impl.AssembleService" />
+	<bean id="airService" class="com.yeoou.tour.service.impl.AirService" />
+	<bean id="busService" class="com.yeoou.tour.service.impl.BusService" />
+	<bean id="shipService" class="com.yeoou.tour.service.impl.ShipService" />
+	<bean id="trainService" class="com.yeoou.tour.service.impl.TrainService" />
+	<bean id="companyService" class="com.yeoou.tour.service.impl.CompanyService" />
+	<bean id="teamService" class="com.yeoou.tour.service.impl.TeamService" />
+	<bean id="ticketLogService" class="com.yeoou.tour.service.impl.TicketLogService" />
+	<bean id="jobberService" class="com.yeoou.tour.service.impl.JobberService" />
+	<bean id="newsTypeService" class="com.yeoou.tour.service.impl.NewsTypeService" />
+	<bean id="newsService" class="com.yeoou.tour.service.impl.NewsService" />
+	<bean id="visaService" class="com.yeoou.tour.service.impl.VisaService" />
+	<bean id="tripModelService" class="com.yeoou.tour.service.impl.TripModelService" />
+	<bean id="tripFlagService" class="com.yeoou.tour.service.impl.TripFlagService" />
+	<bean id="tripContentService" class="com.yeoou.tour.service.impl.TripContentService" />
+	<bean id="themeFlashService" class="com.yeoou.tour.service.impl.ThemeFlashService" />
+	<bean id="flashTypeService" class="com.yeoou.tour.service.impl.FlashTypeService" />
+	<bean id="webSiteService" class="com.yeoou.tour.service.impl.WebSiteService" />
+	<bean id="managerService" class="com.yeoou.tour.service.impl.ManagerService" />
+	<bean id="iprouterService" class="com.yeoou.tour.service.impl.IPRouterService" />
+	<bean id="newsCountService" class="com.yeoou.tour.service.impl.NewsCountService" />
+	<bean id="teamCountService" class="com.yeoou.tour.service.impl.TeamCountService" />
+	<bean id="countSceneryService" class="com.yeoou.tour.service.impl.CountSceneryService" />
+	<bean id="doorOrderService" class="com.yeoou.tour.service.impl.DoorOrderService" />
+	<bean id="bakTeamService" class="com.yeoou.tour.service.impl.BakTeamService" />
+	<bean id="messageService" class="com.yeoou.tour.service.impl.MessageService" />
+</beans>

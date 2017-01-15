@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+	   <hibernate-mapping>
+	   		<class name="com.yeoou.tour.model.RegionLation" table="t_user_region" lazy="false">
+	   			<id name="id" column="LationId">
+	   				<generator class="uuid.hex"></generator>
+	   			</id>
+	       		<property name="haveTeam" column="HaveTeam"></property>
+	   			<many-to-one name="user" class="com.yeoou.rbac.model.User" column="UserId" lazy="false"></many-to-one>
+	   			<many-to-one name="region" class="com.yeoou.tour.model.Region" column="RegionId" lazy="false"></many-to-one>
+	   		</class>
+	   </hibernate-mapping>
