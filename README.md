@@ -9,7 +9,7 @@
 * 权限框架使用ACEGI(ver1.0.5)实现
 * 数据库使用MySQL
 
-## 需求
+## 需求(框架太老了，有兴趣的同学可以升级并共享)
 
 * JDK 1.6
 * Tomcat 6
@@ -27,3 +27,6 @@
 * 前台 http://localhost:${tomcat.port}/spilder/index.html
 * 后台 http://localhost:${tomcat.port}/spilder/login.jsp
 * 用户名:spider 密码:admin
+
+
+## 欢迎有兴趣的同学下载这个网站应用
