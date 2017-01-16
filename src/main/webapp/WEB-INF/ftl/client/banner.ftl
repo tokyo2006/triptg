@@ -134,7 +134,7 @@
 	<#if gg_ss??>
 	<#list gg_ss as hotSight>
 	
-	<A href="${hotSight.url}" <#if hotSight.subTitle!="">class=highlight</#if> target=_blank>${hotSight.title}</A><#if hotSight_has_next>&nbsp;&nbsp;</#if>
+	<A href="${base}/${hotSight.url}" <#if hotSight.subTitle!="">class=highlight</#if> target=_blank>${hotSight.title}</A><#if hotSight_has_next>&nbsp;&nbsp;</#if>
 	</#list>
 	</#if>
 	</div>

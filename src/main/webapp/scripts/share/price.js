@@ -7,7 +7,7 @@ var pltsTitle="";
 document.write('<div id=pltsTipLayer style="display: none;position: absolute; z-index:10001"></div>');
 
 
-<!-- 
+
 var cnstat_ua = navigator.userAgent
 var cnstat_ps = navigator.productSub 
 var cnstat_dom = (document.getElementById)? 1:0
@@ -230,4 +230,3 @@ var FiltersEnabled = 0;
 yeoou_Style[1]=["black","black","#CCCCD4","#F2F3F7","","","","","","","left","","","",0,"",2,2,10,10,51,0.5,75,"simple","orange"];
 yeoou_Style[2]=["white","black","black","white","","","right","","Impact","cursive","center","",3,5,400,150,5,20,10,0,50,1,80,"complex","gray"];
 cnstat_applyCssFilter();
-//-->

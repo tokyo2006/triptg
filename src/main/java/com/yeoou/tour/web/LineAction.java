@@ -6,10 +6,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
-
 import net.sf.json.JSONArray;
-
 import com.yeoou.common.context.Global;
 import com.yeoou.common.dao.support.Page;
 import com.yeoou.common.utils.DateUtils;
@@ -21,7 +18,6 @@ import com.yeoou.rbac.service.IUserService;
 import com.yeoou.tour.model.Area;
 import com.yeoou.tour.model.Company;
 import com.yeoou.tour.model.Content;
-import com.yeoou.tour.model.Jobber;
 import com.yeoou.tour.model.KeyWord;
 import com.yeoou.tour.model.Line;
 import com.yeoou.tour.model.Manager;
@@ -37,6 +33,8 @@ import com.yeoou.tour.service.ILineService;
 import com.yeoou.tour.service.IRegionService;
 import com.yeoou.tour.service.ISceneryPicService;
 import com.yeoou.tour.service.ISceneryService;
+
+
 /**
  * <p>
  * Title: 后台行程相关展示操作模块

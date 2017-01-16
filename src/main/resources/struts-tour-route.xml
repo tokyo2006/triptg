@@ -348,7 +348,7 @@
       	<action name="getChildrenRegion" class="lineAction" method="getChildrenRegion">
       		<result name="success">/trader/jobberLine/result.jsp</result>
       	</action>
- <!--     	<action name="addLine" class="lineAction" method="addLine">
+      	<action name="addLine" class="lineAction" method="addLine">
       		<result name="success">/trader/jobberLine/result.jsp</result>
       	</action>
       	<action name="getSingleLine" class="lineAction" method="getSingleLine">
@@ -359,7 +359,7 @@
       	</action>
       	<action name="delLine" class="lineAction" method="delLine">
       		<result name="success">/trader/jobberLine/result.jsp</result>
-      	</action>-->
+      	</action>
 		<action name="getJobberInf" class="lineAction" method="jobberInfo">
 	  		<result name="success">/trader/jobberLine/result.jsp</result>
 	  	</action>
@@ -487,13 +487,13 @@
 	  	<action name="getAllTeam" class="teamAction" method="getAllTeam">
 	  		<result name="success">/trader/team/result.jsp</result>
 	  	</action>
-<!--		<action name="getAllTeamCompany" class="companyAction" method="getCompany">
+		<!--<action name="getAllTeamCompany" class="companyAction" method="getCompany">
 	  		<result name="success">/trader/team/result.jsp</result>
-	  	</action>
+	  	</action> -->
 		<action name="getTeamArea" class="teamAction" method="getTeamArea">
 	  		<result name="success">/trader/team/result.jsp</result>
 	  	</action>
-		-->
+
 	  	<action name="delTeam" class="teamAction" method="delTeam">
 	  		<result name="success">/trader/team/result.jsp</result>
 	  	</action>
@@ -506,13 +506,13 @@
 		<action name="getChildrenByNode" class="lineAction" method="getChildrenByNode">
       		<result name="success">/trader/team/result.jsp</result>
       	</action>
-<!-- 		<action name="getArea" class="assembleAction" method="getArea">
+ 		<action name="getArea" class="assembleAction" method="getArea">
       		<result name="success">/trader/team/result.jsp</result>
       	</action>
 		<action name="updateRegionByTeam" class="regionAction" method="updateRegionByTeam">
       		<result name="success">/trader/team/result.jsp</result>
       	</action>
-     	<action name="addOrder" class="orderAction" method="addOrder">
+   <!--  	<action name="addOrder" class="orderAction" method="addOrder">
       		<result name="success" type="freemarker">/WEB-INF/ftl/addOrderOk.ftl</result>
       	</action>
       	<action name="addShortOrder" class="orderAction" method="addShortOrder">
@@ -529,7 +529,7 @@
       	</action>
       	<action name="getBookFreeTeam" class="orderAction" method="getBookFreeTeam">
       		<result name="success" type="freemarker">/WEB-INF/ftl/bookHelpFreeLine.ftl</result>
-      	</action>
+      	</action> -->
       	<action name="getPrintTeam" class="teamAction" method="getPrintTeam">
       		<result name="success" type="freemarker">/WEB-INF/ftl/teamPrint.ftl</result>
       	</action>
@@ -551,7 +551,7 @@
 		<action name="getOrdersByTeam" class="teamAction" method="getOrdersByTeam">
 	  		<result name="success">/trader/team/result.jsp</result>
 	  		<result name="short">/trader/team/result.jsp</result>
-	  	</action>-->
+	  	</action>
 	  </package>
 	  <package name="jobberTeam" namespace="/trader/jobberTeam" extends="struts-default">
 	  	<action name="getAllJobberTeam" class="teamAction" method="getAllJobberTeam">

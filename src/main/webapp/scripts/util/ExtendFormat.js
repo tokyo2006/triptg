@@ -1,4 +1,14 @@
-﻿
+﻿/********** 解决日历控件显示异常 **********/
+Ext.override(Ext.menu.DateMenu, {
+	render : function() {
+		Ext.menu.DateMenu.superclass.render.call(this);
+		if (Ext.isGecko || Ext.isSafari || Ext.isChrome) {
+			this.picker.el.dom.childNodes[0].style.width = '178px';
+			this.picker.el.dom.style.width = '178px';
+		}
+	}
+});
+
 if(Ext.util.Format){	
 	Ext.apply(Ext.util.Format,{		
 		moneyRenderer: function(v){
