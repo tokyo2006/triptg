@@ -1,5 +1,10 @@
 # Trip Web Application
 
+========
+
+![status](https://travis-ci.org/tokyo2006/triptg.svg?branch=master)
+
+
 ## 项目框架
 
 * 后台使用Spring(ver2.5) + Strust2(2.0.9) + Hibernate(3.2.0.ga)
