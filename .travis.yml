@@ -1,3 +1,9 @@
-language:java
-
-mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+language: java  
+jdk:  
+  - openjdk6  
+before_install:  
+   - "echo skipped"  
+install:  
+  - "echo deploy steps skipped"  
+script:  
+  - mvn install -Dmaven.javadoc.skip=true  
