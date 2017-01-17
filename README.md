@@ -1,8 +1,4 @@
-# Trip Web Application
-
-========
-
-![status](https://travis-ci.org/tokyo2006/triptg.svg?branch=master)
+# Trip Web Application [![Build Status](https://travis-ci.org/tokyo2006/triptg.svg?branch=master)](https://travis-ci.org/tokyo2006/triptg) ![platform](https://img.shields.io/badge/platform-java-blue.svg)
 
 
 ## 项目框架
